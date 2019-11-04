@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0k-l5-OyI">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y0k-l5-OyI">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZP-vM-Oh8" customClass="CustomImageView" customModule="OtusHomework1" customModuleProvider="target">
-                                <rect key="frame" x="157" y="40" width="100" height="100"/>
+                                <rect key="frame" x="157" y="20" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mrS-gi-kdK"/>
                                     <constraint firstAttribute="width" constant="100" id="quW-lL-gJe"/>
@@ -32,24 +30,32 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7n-zQ-eBO">
-                                <rect key="frame" x="158.66666666666666" y="160" width="97" height="30"/>
+                                <rect key="frame" x="158.66666666666666" y="140" width="97" height="30"/>
                                 <state key="normal" title="To Second VC"/>
                                 <connections>
                                     <segue destination="fUB-qr-QLf" kind="show" id="pYj-Ly-qY0"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DSi-MQ-lsS">
-                                <rect key="frame" x="0.0" y="210" width="414" height="526"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+7 (000) 000-00-00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l0v-Mg-8y5" customClass="PhoneTextField" customModule="OtusHomework1" customModuleProvider="target">
+                                <rect key="frame" x="103.66666666666669" y="190" width="207" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75757293176198237" green="1" blue="0.77095215718471455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DSi-MQ-lsS" firstAttribute="top" secondItem="R7n-zQ-eBO" secondAttribute="bottom" constant="20" id="Cmc-XJ-K55"/>
+                            <constraint firstItem="l0v-Mg-8y5" firstAttribute="top" secondItem="R7n-zQ-eBO" secondAttribute="bottom" constant="20" id="7hX-8j-Npd"/>
+                            <constraint firstItem="l0v-Mg-8y5" firstAttribute="width" secondItem="vQM-yB-aZc" secondAttribute="width" multiplier="1:2" id="CLU-OH-ku3"/>
                             <constraint firstItem="R7n-zQ-eBO" firstAttribute="top" secondItem="WZP-vM-Oh8" secondAttribute="bottom" constant="20" id="HXu-HK-VUT"/>
                             <constraint firstItem="WZP-vM-Oh8" firstAttribute="centerX" secondItem="vQM-yB-aZc" secondAttribute="centerX" id="NQV-01-6mf"/>
                             <constraint firstItem="vQM-yB-aZc" firstAttribute="bottom" secondItem="DSi-MQ-lsS" secondAttribute="bottom" id="Nrb-MH-ED4"/>
                             <constraint firstItem="WZP-vM-Oh8" firstAttribute="top" secondItem="vQM-yB-aZc" secondAttribute="top" constant="20" id="NsJ-Fq-GqD"/>
+                            <constraint firstItem="l0v-Mg-8y5" firstAttribute="centerX" secondItem="vQM-yB-aZc" secondAttribute="centerX" id="OBH-Gg-FTW"/>
+                            <constraint firstItem="DSi-MQ-lsS" firstAttribute="top" secondItem="l0v-Mg-8y5" secondAttribute="bottom" constant="20" id="aMb-eV-8W8"/>
                             <constraint firstItem="vQM-yB-aZc" firstAttribute="trailing" secondItem="DSi-MQ-lsS" secondAttribute="trailing" id="b7B-tF-HSX"/>
                             <constraint firstItem="R7n-zQ-eBO" firstAttribute="centerX" secondItem="vQM-yB-aZc" secondAttribute="centerX" id="kLI-rA-LZf"/>
                             <constraint firstItem="DSi-MQ-lsS" firstAttribute="leading" secondItem="vQM-yB-aZc" secondAttribute="leading" id="mNq-x1-KZ3"/>
@@ -59,6 +65,7 @@
                     <navigationItem key="navigationItem" id="Xwh-xQ-AbU"/>
                     <connections>
                         <outlet property="tableView" destination="DSi-MQ-lsS" id="eza-5w-Weq"/>
+                        <outlet property="textField" destination="l0v-Mg-8y5" id="G1E-lz-0zF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-6B-xYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,7 +77,7 @@
             <objects>
                 <viewController storyboardIdentifier="SessionSummaryViewController" id="fUB-qr-QLf" customClass="SessionSummaryViewController" customModule="OtusHomework1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lgF-tO-JIf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSb-96-3hj">
@@ -95,7 +102,7 @@
             <objects>
                 <viewController storyboardIdentifier="ThirdViewController" id="H8X-k1-uWt" customClass="ThirdViewController" customModule="OtusHomework1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gBR-iq-S70">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYr-b7-dK4">

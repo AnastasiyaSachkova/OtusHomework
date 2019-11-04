@@ -10,6 +10,8 @@ import UIKit
 
 class FeedViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: PhoneTextField!
+    
     fileprivate let viewModel = FeedViewModel()
 
     override func viewDidLoad() {

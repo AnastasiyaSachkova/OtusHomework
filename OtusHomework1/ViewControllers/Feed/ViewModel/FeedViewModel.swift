@@ -36,3 +36,4 @@ extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
 //        navigationController?.pushViewController(vc, animated: true)
     }
 }
+
