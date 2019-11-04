@@ -42,22 +42,14 @@ class ProfileViewController: UIViewController, NavigationProtocol {
         guard let tx = value else { return "" }
         var str = tx
         let locale = Locale(identifier: locale)
-        //private let format = "dMMMMyEEEE"
-        //let dateFormater = DateFormatter()
+        
         let measurementFormatter = MeasurementFormatter()
         measurementFormatter.locale = locale
-//        dateFormater.locale = locale
-//        dateFormater.dateFormat = format
-//        dateFormater.setLocalizedDateFormatFromTemplate(format)
-//
-//        if let date = dateFormater.date(from: tx) {
-//            str = dateFormater.string(from: date)
-//        } else {
-            let replace = tx.replacingOccurrences(of: ",", with: ".")
-            let matched = matches.matches(for: "[+-]?([0-9]*[.])?[0-9]+", in: replace)
-            let measurment = matched.map{ Measurement(value: Double($0)!, unit: UnitLength.kilometers) }
-            str = measurment.compactMap{ measurementFormatter.string(for: $0) }.joined(separator:", ")
-//        }
+        let replace = tx.replacingOccurrences(of: ",", with: ".")
+        let matched = matches.matches(for: "[+-]?([0-9]*[.])?[0-9]+", in: replace)
+        let measurment = matched.map{ Measurement(value: Double($0)!, unit: UnitLength.kilometers) }
+        str = measurment.compactMap{ measurementFormatter.string(for: $0) }.joined(separator:", ")
+        
         return str
     }
     
