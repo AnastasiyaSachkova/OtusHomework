@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y7r-vy-iIB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="W9o-hD-FmG">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Y7r-vy-iIB" customClass="ProfileViewController" customModule="OtusHomework1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETa-0j-gjX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pd-Nq-Mtk" customClass="CustomButton" customModule="OtusHomework1" customModuleProvider="target">
+                                <rect key="frame" x="130" y="413" width="155" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.92941176469999998" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.2784313725" green="0.61960784310000006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="1" green="0.0" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cDP-Or-aWC">
+                                <rect key="frame" x="20" y="73" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Ru"/>
+                                    <segment title="En"/>
+                                    <segment title="Fr"/>
+                                    <segment title="Zh"/>
+                                    <segment title="Es"/>
+                                    <segment title="Current"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged" destination="Y7r-vy-iIB" eventType="valueChanged" id="xCf-pY-OlH"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0o-94-MNv">
+                                <rect key="frame" x="20" y="124" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.6418081654430936" green="1" blue="0.98219582761279689" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q0o-94-MNv" firstAttribute="top" secondItem="cDP-Or-aWC" secondAttribute="bottom" constant="20" id="4Hx-kz-cQQ"/>
+                            <constraint firstItem="Q0o-94-MNv" firstAttribute="trailing" secondItem="cDP-Or-aWC" secondAttribute="trailing" id="4sk-1v-rM0"/>
+                            <constraint firstItem="cDP-Or-aWC" firstAttribute="leading" secondItem="naC-Kq-172" secondAttribute="leading" constant="20" id="9Z6-LF-IQ5"/>
+                            <constraint firstItem="Q0o-94-MNv" firstAttribute="leading" secondItem="cDP-Or-aWC" secondAttribute="leading" id="G2m-RL-Dum"/>
+                            <constraint firstItem="cDP-Or-aWC" firstAttribute="top" secondItem="naC-Kq-172" secondAttribute="top" constant="29" id="LNG-mP-XrM"/>
+                            <constraint firstItem="naC-Kq-172" firstAttribute="trailing" secondItem="cDP-Or-aWC" secondAttribute="trailing" constant="20" id="yXO-4J-vah"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="naC-Kq-172"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BIv-Qv-yOX"/>
+                    <connections>
+                        <outlet property="label" destination="Q0o-94-MNv" id="vyF-ow-TZ1"/>
+                        <outlet property="segmentedControl" destination="cDP-Or-aWC" id="AxQ-ku-r62"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zPq-CF-CwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557.9710144927537" y="-404.46428571428572"/>
+        </scene>
+    </scenes>
+</document>
