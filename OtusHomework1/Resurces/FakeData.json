@@ -1,6 +1,22 @@
 {
     "data": [
         {
+            "id": 21,
+            "name": "Array",
+        },
+        {
+            "id": 22,
+            "name": "Set",
+        },
+        {
+            "id": 23,
+            "name": "Dictionary",
+        },
+        {
+            "id": 24,
+            "name": "SuffixArray",
+        },
+        {
             "id": 1,
             "name": "Item 1",
         },

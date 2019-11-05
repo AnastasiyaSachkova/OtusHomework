@@ -11,8 +11,12 @@ import UIKit
 
 class FeedViewModel: NSObject {
     
-private var fakeData: [FakeData] = FakeDataProvider().loadFakeData()
-var reloadSections: ((_ section: Int) -> Void)?
+    private var fakeData: [FakeData] = FakeDataProvider().loadFakeData()
+    private var algoData = AlgoProvider().all
+    private let findData = FindFakeDataProvider()
+    var reloadSections: ((_ section: Int) -> Void)?
+    typealias VoidCompletion = () -> Void
+    private var findCompletion: VoidCompletion?
     
 }
 
@@ -31,9 +35,37 @@ extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = Initial.sessionSummaryVC
-//        vc.title = fakeData[indexPath.row].name
-//        navigationController?.pushViewController(vc, animated: true)
+        var vc: UIViewController?
+        if let cell = tableView.cellForRow(at: indexPath) as? FeedTableViewCell, let name = cell.title.text {
+            switch name {
+            case "Array": vc = Initial.arrayViewController
+            case "Set": vc = Initial.setViewController
+            case "Dictionary": vc = Initial.dictionaryViewController
+            case "SuffixArray": vc = Initial.suffixSequenceViewController
+            default: vc = Initial.sessionSummaryVC
+
+            }
+        }
+        
+        if let vc = vc {
+            Router.shared.routToDataStructures(vc: vc)
+        }
     }
+}
+
+extension FeedViewModel: UISearchBarDelegate, UISearchResultsUpdating {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        guard let text = searchBar.text else { return }
+        findData.updateSuffixArray()
+        fakeData = findData.findDataByName(text)
+        
+    }
+
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        fakeData = findData.findDataByName(text)
+      
+    }
+
 }
 

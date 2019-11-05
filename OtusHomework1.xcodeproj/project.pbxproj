@@ -44,13 +44,30 @@
 		13F57B67233CACD800B11B34 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F57B66233CACD800B11B34 /* TimerModel.swift */; };
 		6C35A8FF237050AF005B9A64 /* Mathes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A8FE237050AF005B9A64 /* Mathes.swift */; };
 		6C35A901237066C6005B9A64 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A900237066C6005B9A64 /* PhoneTextField.swift */; };
+		6C35A9032370707C005B9A64 /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A9022370707C005B9A64 /* SuffixIterator.swift */; };
+		6C35A905237070DD005B9A64 /* AlgoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A904237070DD005B9A64 /* AlgoProvider.swift */; };
+		6C35A91023707266005B9A64 /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A90F23707266005B9A64 /* ArrayViewController.swift */; };
+		6C35A91223707280005B9A64 /* SuffixSequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */; };
+		6C35A91423707298005B9A64 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A91323707298005B9A64 /* DictionaryViewController.swift */; };
+		6C35A916237072B0005B9A64 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A915237072B0005B9A64 /* SetViewController.swift */; };
+		6C35A918237072C7005B9A64 /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A917237072C7005B9A64 /* DataStructuresViewController.swift */; };
+		6C35A9212370751B005B9A64 /* Profiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A9202370751B005B9A64 /* Profiler.swift */; };
+		6C35A92323707525005B9A64 /* StringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A92223707525005B9A64 /* StringGenerator.swift */; };
+		6C35A9272370753B005B9A64 /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A9252370753B005B9A64 /* ArrayManipulator.swift */; };
+		6C35A9282370753B005B9A64 /* SwiftArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A9262370753B005B9A64 /* SwiftArrayManipulator.swift */; };
+		6C35A92C2370755A005B9A64 /* DictionaryManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A92A2370755A005B9A64 /* DictionaryManipulator.swift */; };
+		6C35A92D2370755A005B9A64 /* SwiftDictionaryManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A92B2370755A005B9A64 /* SwiftDictionaryManipulator.swift */; };
+		6C35A93123707575005B9A64 /* SwiftSetManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A92F23707575005B9A64 /* SwiftSetManipulator.swift */; };
+		6C35A93223707575005B9A64 /* SetManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A93023707575005B9A64 /* SetManipulator.swift */; };
+		6C35A93623707590005B9A64 /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A93423707590005B9A64 /* SuffixArrayManipulator.swift */; };
+		6C35A93723707590005B9A64 /* SwiftSuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A93523707590005B9A64 /* SwiftSuffixArrayManipulator.swift */; };
+		6C6679B5237161EA0067BAF8 /* DataStructures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6679B3237161E90067BAF8 /* DataStructures.storyboard */; };
 		6C9B5A2A237013A5000FBF82 /* BenchmarkiewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A29237013A5000FBF82 /* BenchmarkiewModel.swift */; };
 		6C9B5A2C237013C8000FBF82 /* BanchmarcCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A2B237013C8000FBF82 /* BanchmarcCellModel.swift */; };
 		6C9B5A302370143E000FBF82 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A2F2370143E000FBF82 /* FeedViewModel.swift */; };
 		6C9B5A372370153F000FBF82 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A362370153F000FBF82 /* PieChart.swift */; };
 		6C9B5A3923701556000FBF82 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A3823701556000FBF82 /* PieChartView.swift */; };
 		6C9B5A3B237015A6000FBF82 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A3A237015A6000FBF82 /* Router.swift */; };
-		6C9B5A3D237015BE000FBF82 /* LocaleDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A3C237015BE000FBF82 /* LocaleDateFormatter.swift */; };
 		6C9B5A402370160E000FBF82 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A3E2370160E000FBF82 /* UITableViewCell+Extensions.swift */; };
 		6C9B5A412370160E000FBF82 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A3F2370160E000FBF82 /* UIViewController+Extension.swift */; };
 		6C9B5A4423701618000FBF82 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A4223701618000FBF82 /* UIApplication+Extension.swift */; };
@@ -127,13 +144,30 @@
 		13F57B66233CACD800B11B34 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		6C35A8FE237050AF005B9A64 /* Mathes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mathes.swift; sourceTree = "<group>"; };
 		6C35A900237066C6005B9A64 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
+		6C35A9022370707C005B9A64 /* SuffixIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixIterator.swift; sourceTree = "<group>"; };
+		6C35A904237070DD005B9A64 /* AlgoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoProvider.swift; sourceTree = "<group>"; };
+		6C35A90F23707266005B9A64 /* ArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViewController.swift; sourceTree = "<group>"; };
+		6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixSequenceViewController.swift; sourceTree = "<group>"; };
+		6C35A91323707298005B9A64 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		6C35A915237072B0005B9A64 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		6C35A917237072C7005B9A64 /* DataStructuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
+		6C35A9202370751B005B9A64 /* Profiler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profiler.swift; sourceTree = "<group>"; };
+		6C35A92223707525005B9A64 /* StringGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringGenerator.swift; sourceTree = "<group>"; };
+		6C35A9252370753B005B9A64 /* ArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayManipulator.swift; sourceTree = "<group>"; };
+		6C35A9262370753B005B9A64 /* SwiftArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftArrayManipulator.swift; sourceTree = "<group>"; };
+		6C35A92A2370755A005B9A64 /* DictionaryManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryManipulator.swift; sourceTree = "<group>"; };
+		6C35A92B2370755A005B9A64 /* SwiftDictionaryManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDictionaryManipulator.swift; sourceTree = "<group>"; };
+		6C35A92F23707575005B9A64 /* SwiftSetManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSetManipulator.swift; sourceTree = "<group>"; };
+		6C35A93023707575005B9A64 /* SetManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetManipulator.swift; sourceTree = "<group>"; };
+		6C35A93423707590005B9A64 /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
+		6C35A93523707590005B9A64 /* SwiftSuffixArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSuffixArrayManipulator.swift; sourceTree = "<group>"; };
+		6C6679B4237161E90067BAF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = OtusHomework1/Storyboards/Base.lproj/DataStructures.storyboard; sourceTree = "<group>"; };
 		6C9B5A29237013A5000FBF82 /* BenchmarkiewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkiewModel.swift; sourceTree = "<group>"; };
 		6C9B5A2B237013C8000FBF82 /* BanchmarcCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchmarcCellModel.swift; sourceTree = "<group>"; };
 		6C9B5A2F2370143E000FBF82 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		6C9B5A362370153F000FBF82 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		6C9B5A3823701556000FBF82 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		6C9B5A3A237015A6000FBF82 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		6C9B5A3C237015BE000FBF82 /* LocaleDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDateFormatter.swift; sourceTree = "<group>"; };
 		6C9B5A3E2370160E000FBF82 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		6C9B5A3F2370160E000FBF82 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		6C9B5A4223701618000FBF82 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
@@ -217,8 +251,7 @@
 				6C9B5A48237016C1000FBF82 /* Services */,
 				139BC090231FB1E800D9A7EE /* Protocols */,
 				13072D77233B5D2B00FA34D4 /* Extensions */,
-				13C862E7233A4340001523AC /* Helpers */,
-				1354192D23166D2B00F5DEEE /* CustomElements */,
+				1354192D23166D2B00F5DEEE /* UIElements */,
 				13C862D0233A14A0001523AC /* LifecycleBehavior */,
 				13072D7A233B649200FA34D4 /* CollectionLayouts */,
 				13C862DD233A2B50001523AC /* Cells */,
@@ -229,17 +262,17 @@
 			path = OtusHomework1;
 			sourceTree = "<group>";
 		};
-		1354192D23166D2B00F5DEEE /* CustomElements */ = {
+		1354192D23166D2B00F5DEEE /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
 				6C9B5A3523701527000FBF82 /* PieChart */,
-				1354192E23166D5800F5DEEE /* CustomButton.swift */,
-				1354193623166E7C00F5DEEE /* CustomView.swift */,
-				13541945231673EB00F5DEEE /* CustomImageView.swift */,
-				135419472316742700F5DEEE /* CustomSwitch.swift */,
-				6C35A900237066C6005B9A64 /* PhoneTextField.swift */,
+				6C35A9062370712D005B9A64 /* Buttons */,
+				6C35A90B23707197005B9A64 /* ImageViews */,
+				6C35A9072370713B005B9A64 /* Views */,
+				6C35A90C237071A3005B9A64 /* Switchs */,
+				6C35A90A23707186005B9A64 /* TextFields */,
 			);
-			path = CustomElements;
+			path = UIElements;
 			sourceTree = "<group>";
 		};
 		1354193023166D6100F5DEEE /* Resurces */ = {
@@ -255,6 +288,7 @@
 		1354193123166D9500F5DEEE /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				6C6679B3237161E90067BAF8 /* DataStructures.storyboard */,
 				1354194C231690AB00F5DEEE /* LaunchScreen.storyboard */,
 				1354194E231690AB00F5DEEE /* Main.storyboard */,
 				1354193823166F4900F5DEEE /* Detail.storyboard */,
@@ -268,6 +302,7 @@
 		1354193223166DB900F5DEEE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6C35A90E23707241005B9A64 /* DataStructures */,
 				6C9B5A2623701335000FBF82 /* Benchmark */,
 				6C9B5A2D237013FF000FBF82 /* Feed */,
 				6C9B5A32237014A0000FBF82 /* Profile */,
@@ -321,24 +356,130 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		13C862E7233A4340001523AC /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				13072D7F233B6AB300FA34D4 /* SimpleTimer.swift */,
-				13072D81233B9D3C00FA34D4 /* Initial.swift */,
-				6C9B5A3A237015A6000FBF82 /* Router.swift */,
-				6C9B5A3C237015BE000FBF82 /* LocaleDateFormatter.swift */,
-				6C35A8FE237050AF005B9A64 /* Mathes.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		13F57B65233CAC8E00B11B34 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				13F57B66233CACD800B11B34 /* TimerModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6C35A9062370712D005B9A64 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1354192E23166D5800F5DEEE /* CustomButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		6C35A9072370713B005B9A64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1354193623166E7C00F5DEEE /* CustomView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C35A90A23707186005B9A64 /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A900237066C6005B9A64 /* PhoneTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		6C35A90B23707197005B9A64 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				13541945231673EB00F5DEEE /* CustomImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		6C35A90C237071A3005B9A64 /* Switchs */ = {
+			isa = PBXGroup;
+			children = (
+				135419472316742700F5DEEE /* CustomSwitch.swift */,
+			);
+			path = Switchs;
+			sourceTree = "<group>";
+		};
+		6C35A90D237071E3005B9A64 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				6C9B5A49237016EA000FBF82 /* FakeDataProvider.swift */,
+				6C35A904237070DD005B9A64 /* AlgoProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		6C35A90E23707241005B9A64 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A90F23707266005B9A64 /* ArrayViewController.swift */,
+				6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */,
+				6C35A91323707298005B9A64 /* DictionaryViewController.swift */,
+				6C35A915237072B0005B9A64 /* SetViewController.swift */,
+				6C35A917237072C7005B9A64 /* DataStructuresViewController.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		6C35A91E237074D8005B9A64 /* Profiler */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A9202370751B005B9A64 /* Profiler.swift */,
+				6C35A91F237074F5005B9A64 /* DataStructures */,
+			);
+			path = Profiler;
+			sourceTree = "<group>";
+		};
+		6C35A91F237074F5005B9A64 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A9242370752E005B9A64 /* Array */,
+				6C35A92223707525005B9A64 /* StringGenerator.swift */,
+				6C35A9332370757A005B9A64 /* SuffixArray */,
+				6C35A92E23707566005B9A64 /* Set */,
+				6C35A92923707546005B9A64 /* Dictionary */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		6C35A9242370752E005B9A64 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A9252370753B005B9A64 /* ArrayManipulator.swift */,
+				6C35A9262370753B005B9A64 /* SwiftArrayManipulator.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		6C35A92923707546005B9A64 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A92A2370755A005B9A64 /* DictionaryManipulator.swift */,
+				6C35A92B2370755A005B9A64 /* SwiftDictionaryManipulator.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		6C35A92E23707566005B9A64 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A93023707575005B9A64 /* SetManipulator.swift */,
+				6C35A92F23707575005B9A64 /* SwiftSetManipulator.swift */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		6C35A9332370757A005B9A64 /* SuffixArray */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A93423707590005B9A64 /* SuffixArrayManipulator.swift */,
+				6C35A93523707590005B9A64 /* SwiftSuffixArrayManipulator.swift */,
+			);
+			path = SuffixArray;
 			sourceTree = "<group>";
 		};
 		6C9B5A2523701324000FBF82 /* Model */ = {
@@ -440,7 +581,13 @@
 		6C9B5A48237016C1000FBF82 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6C9B5A49237016EA000FBF82 /* FakeDataProvider.swift */,
+				13072D7F233B6AB300FA34D4 /* SimpleTimer.swift */,
+				13072D81233B9D3C00FA34D4 /* Initial.swift */,
+				6C9B5A3A237015A6000FBF82 /* Router.swift */,
+				6C35A8FE237050AF005B9A64 /* Mathes.swift */,
+				6C35A9022370707C005B9A64 /* SuffixIterator.swift */,
+				6C35A91E237074D8005B9A64 /* Profiler */,
+				6C35A90D237071E3005B9A64 /* Providers */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -543,6 +690,7 @@
 				135419232316691100F5DEEE /* Assets.xcassets in Resources */,
 				13541951231690AB00F5DEEE /* Main.storyboard in Resources */,
 				1354193A23166F4900F5DEEE /* Detail.storyboard in Resources */,
+				6C6679B5237161EA0067BAF8 /* DataStructures.storyboard in Resources */,
 				13541950231690AB00F5DEEE /* LaunchScreen.storyboard in Resources */,
 				1354193F23166FB200F5DEEE /* Profile.storyboard in Resources */,
 				13F57B64233CA4E800B11B34 /* FeedTableViewCell.xib in Resources */,
@@ -566,19 +714,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C35A918237072C7005B9A64 /* DataStructuresViewController.swift in Sources */,
+				6C35A9212370751B005B9A64 /* Profiler.swift in Sources */,
 				13072D79233B5D4500FA34D4 /* UIColor+Random.swift in Sources */,
+				6C35A916237072B0005B9A64 /* SetViewController.swift in Sources */,
 				6C9B5A372370153F000FBF82 /* PieChart.swift in Sources */,
+				6C35A91223707280005B9A64 /* SuffixSequenceViewController.swift in Sources */,
 				13F57B63233CA4E800B11B34 /* FeedTableViewCell.swift in Sources */,
 				6C9B5A4A237016EA000FBF82 /* FakeDataProvider.swift in Sources */,
+				6C35A92D2370755A005B9A64 /* SwiftDictionaryManipulator.swift in Sources */,
 				6C35A901237066C6005B9A64 /* PhoneTextField.swift in Sources */,
 				13072D84233B9D7900FA34D4 /* FeedViewController.swift in Sources */,
 				6C9B5A412370160E000FBF82 /* UIViewController+Extension.swift in Sources */,
+				6C35A905237070DD005B9A64 /* AlgoProvider.swift in Sources */,
 				13C862C7233A05BC001523AC /* BenchmarkViewController.swift in Sources */,
 				6C9B5A3B237015A6000FBF82 /* Router.swift in Sources */,
 				13072D82233B9D3C00FA34D4 /* Initial.swift in Sources */,
+				6C35A9032370707C005B9A64 /* SuffixIterator.swift in Sources */,
 				6C9B5A4523701618000FBF82 /* UICollectionViewCell+Extension.swift in Sources */,
+				6C35A91423707298005B9A64 /* DictionaryViewController.swift in Sources */,
 				6C9B5A3923701556000FBF82 /* PieChartView.swift in Sources */,
 				13072D7E233B64FD00FA34D4 /* StagLayout.swift in Sources */,
+				6C35A9282370753B005B9A64 /* SwiftArrayManipulator.swift in Sources */,
 				13072D86233B9E2700FA34D4 /* HideNavigationBarBehavior.swift in Sources */,
 				13C862D6233A189A001523AC /* SessionSummaryViewController.swift in Sources */,
 				13C862CF233A1049001523AC /* TimerBehavior.swift in Sources */,
@@ -591,20 +748,27 @@
 				6C9B5A2C237013C8000FBF82 /* BanchmarcCellModel.swift in Sources */,
 				6C9B5A302370143E000FBF82 /* FeedViewModel.swift in Sources */,
 				13F57B67233CACD800B11B34 /* TimerModel.swift in Sources */,
+				6C35A9272370753B005B9A64 /* ArrayManipulator.swift in Sources */,
+				6C35A93723707590005B9A64 /* SwiftSuffixArrayManipulator.swift in Sources */,
 				13C862E1233A31D4001523AC /* FakeData.swift in Sources */,
 				13C862C9233A05DE001523AC /* ProfileViewController.swift in Sources */,
 				13072D7C233B64CA00FA34D4 /* CustomCollectionViewDelegate.swift in Sources */,
-				6C9B5A3D237015BE000FBF82 /* LocaleDateFormatter.swift in Sources */,
+				6C35A92C2370755A005B9A64 /* DictionaryManipulator.swift in Sources */,
 				13C862D8233A1931001523AC /* ThirdViewController.swift in Sources */,
 				135419482316742700F5DEEE /* CustomSwitch.swift in Sources */,
+				6C35A91023707266005B9A64 /* ArrayViewController.swift in Sources */,
 				1354191C2316690F00F5DEEE /* AppDelegate.swift in Sources */,
 				1354192F23166D5800F5DEEE /* CustomButton.swift in Sources */,
 				13C862EA233A471A001523AC /* BenchmarkCollectionViewCell.swift in Sources */,
 				6C9B5A4C2370177F000FBF82 /* TabBarViewController.swift in Sources */,
 				139BC08F231FB02500D9A7EE /* LifecycleBehaviorsViewController.swift in Sources */,
+				6C35A93223707575005B9A64 /* SetManipulator.swift in Sources */,
+				6C35A93123707575005B9A64 /* SwiftSetManipulator.swift in Sources */,
 				6C9B5A402370160E000FBF82 /* UITableViewCell+Extensions.swift in Sources */,
+				6C35A93623707590005B9A64 /* SuffixArrayManipulator.swift in Sources */,
 				6C9B5A4723701651000FBF82 /* NavigationProtocol.swift in Sources */,
 				139BC092231FB21A00D9A7EE /* LifecycleBehaviorProtocol.swift in Sources */,
+				6C35A92323707525005B9A64 /* StringGenerator.swift in Sources */,
 				13072D80233B6AB300FA34D4 /* SimpleTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +838,14 @@
 				1354194F231690AB00F5DEEE /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6C6679B3237161E90067BAF8 /* DataStructures.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C6679B4237161E90067BAF8 /* Base */,
+			);
+			name = DataStructures.storyboard;
 			sourceTree = "<group>";
 		};
 		6C9B5A55237017F1000FBF82 /* MainInterface.storyboard */ = {

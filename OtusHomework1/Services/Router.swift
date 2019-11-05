@@ -8,11 +8,12 @@
 
 import Foundation
 import UIKit
+
 class Router {
     static let shared = Router()
     
     
-    func routToProfile(index: Int, text: String?){
+    func routToProfile(index: Int, text: String?) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         guard let window = appDelegate.window else { return}
         let tb = Initial.tabBarVC
@@ -26,5 +27,11 @@ class Router {
         
         window.rootViewController = tb
         window.makeKeyAndVisible()
+    }
+    
+    func routToDataStructures(vc: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController?.present(vc, animated: true, completion: nil)
+        }
     }
 }
