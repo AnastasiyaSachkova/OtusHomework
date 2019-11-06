@@ -20,10 +20,10 @@ class TimerModel {
     
     func startOrStopTimer() {
         if !isRunning {
-        isRunning = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+            isRunning = true
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         } else {
-           stopTimer()
+            stopTimer()
         }
     }
     

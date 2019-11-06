@@ -19,9 +19,6 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupSearchBar()
-//        viewModel.insertNewObjectAtBeginning()
-//        viewModel.insertNewObjectInMiddle()
-//        viewModel.addNewObjectAtEnd()
     }
     
     private func setupSearchBar() {

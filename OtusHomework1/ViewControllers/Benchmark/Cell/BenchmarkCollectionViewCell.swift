@@ -12,7 +12,6 @@ class BenchmarkCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var chartView: PieChartView!
-    
     private var counter = 0
     weak var timer: TimerModel?
     
@@ -27,7 +26,7 @@ class BenchmarkCollectionViewCell: UICollectionViewCell {
         
     func set(data:FakeData) {
         title.text = data.name
-        setChart()
+        
     }
 
     func setupTimer() {
@@ -40,19 +39,31 @@ class BenchmarkCollectionViewCell: UICollectionViewCell {
         model.removeTimer()
     }
     
-    private func setChart() {
-        chartView.setSize(diameter: frame.height/4, spacing: 5)
-        //updateChartData(onInterval: viewModel.intervalOn, offInterval: viewModel.intervalOff)
+    private func updateChartData(onInterval: CGFloat, offInterval: CGFloat) {
+      
+       let chartData = [
+        Pie(title: "pie1", value: onInterval, color: UIColor.random),
+        Pie(title: "pie2", value: offInterval, color: UIColor.random)
+             ]
+        chartView.update(values: chartData)
+             chartView.setNeedsDisplay()
     }
     
-    private func updateChartData(onInterval: CGFloat, offInterval: CGFloat) {
-       
-    }
 }
-
 
 extension BenchmarkCollectionViewCell: TimerModelDelegate {
     func updateTimerTick(sec: Int) {
-        title.text = "\(sec)"
+        title.text = Double(sec).stringFromTimeInterval()//"\(sec)"
+        updateChartData(onInterval: CGFloat(sec), offInterval: 1)
+    }
+}
+
+extension TimeInterval{
+    func stringFromTimeInterval() -> String {
+        let time = NSInteger(self)
+        let seconds = time % 60
+        let minutes = (time / 60) % 60
+        return String(format: "%0.2d:%0.2d",minutes,seconds)
+        
     }
 }

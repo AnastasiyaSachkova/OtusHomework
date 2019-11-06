@@ -16,27 +16,32 @@ class PieChartView: UIView {
         .foregroundColor    : UIColor.black
     ]
     
-    private var pies: [Pie] = []
+    var pies = [Pie]() {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     private var diameter: CGFloat = 0
     private var spacing: CGFloat = 1
     
-       override init(frame: CGRect) {
-           super.init(frame: frame)
-           let diameter = min(frame.width, frame.height)
-           setSize(diameter: diameter)
-       }
-       
-       required init?(coder aDecoder: NSCoder) {
-           super.init(coder: aDecoder)
-       }
-              
-       override func draw(_ rect: CGRect) {
-           setChart()
-       }
-       
-       override func prepareForInterfaceBuilder() {
-           setNeedsDisplay()
-       }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let diameter = min(frame.width, frame.height)
+        setSize(diameter: diameter)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        setChart()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setNeedsDisplay()
+    }
     
     func setSize(diameter: CGFloat, spacing: CGFloat = 1) {
         self.diameter = diameter
@@ -44,65 +49,71 @@ class PieChartView: UIView {
         setChart()
     }
     
-    func updateCharts(values: [Pie]) {
+    func update(values: [Pie]) {
         self.pies = values
         setChart()
     }
     
     private func setChart() {
-                guard let context = UIGraphicsGetCurrentContext() else {
+        guard let ctx = UIGraphicsGetCurrentContext() else {
             return
         }
+        layer.backgroundColor = backgroundColor?.cgColor
         
-        let radius = diameter / 2
+        let radius: CGFloat
+        let leastLength: CGFloat = min(frame.width, frame.height)
+        if diameter > 0 && diameter < leastLength {
+            radius = diameter / 2
+        } else {
+            radius = leastLength / 2
+        }
+        
         let textPositionOffset: CGFloat = 0.5
         let viewCenter = bounds.center
         
-        let totalSegmentsValue = pies.reduce(0, { $0 + $1.value })
-        var startAngle = -CGFloat.pi * 0.5
+        let totalSegmentsValue = pies.map({ $0.value }).reduce(0, +)
+        var startAngle = -CGFloat.pi / 2
         
         for segment in pies {
-            context.setFillColor(segment.color.cgColor)
+            ctx.setFillColor(segment.color.cgColor)
             
-
             let endAngle = startAngle + 2 * .pi * (segment.value / totalSegmentsValue)
-            context.move(to: viewCenter)
-            context.addArc(center: viewCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
-            context.fillPath()
+            ctx.move(to: viewCenter)
+            ctx.addArc(center: viewCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+            ctx.fillPath()
             
-            context.move(to: viewCenter)
-            context.addLine(to: CGPoint(center: viewCenter, radius: radius, degrees: endAngle))
-            context.setStrokeColor(UIColor.black.cgColor)
-            context.setLineWidth(spacing)
-            context.strokePath()
+            ctx.move(to: viewCenter)
+            ctx.addLine(to: CGPoint(center: viewCenter, radius: radius, degrees: endAngle))
+            ctx.setStrokeColor(UIColor.black.cgColor)
+            ctx.setLineWidth(1)
+            ctx.strokePath()
             
-
             let halfAngle = startAngle + (endAngle - startAngle) * 0.5
             let segmentCenter = viewCenter.projected(by: radius * textPositionOffset, angle: halfAngle)
             let textToRender = titleFor(segment)
             let renderRect = CGRect(centeredOn: segmentCenter, size: textToRender.size())
             textToRender.draw(in: renderRect)
-            
             startAngle = endAngle
-    }
+        }
     }
     
+    
     private func titleFor(_ segment: Pie) -> NSAttributedString {
-           
-           let segmentPercent: Int = {
-               let totalValue = pies.reduce(0, { $0 + $1.value })
-               return Int((segment.value / totalValue) * 100)
-           }()
-           
-           let mainTextRow = NSAttributedString.init(string: segment.title, attributes: textAttributes)
-           let subTextRow = NSAttributedString.init(string: "\(segmentPercent) %", attributes: textAttributes)
-           
-           let result = NSMutableAttributedString.init(attributedString: mainTextRow)
-           result.append(NSAttributedString(string: "\n"))
-           result.append(subTextRow)
-           
-           return result
-       }
+        
+        let segmentPercent: Int = {
+            let totalValue = pies.reduce(0, { $0 + $1.value })
+            return Int((segment.value / totalValue) * 100)
+        }()
+        
+        let mainTextRow = NSAttributedString.init(string: segment.title, attributes: textAttributes)
+        let subTextRow = NSAttributedString.init(string: "\(segmentPercent) %", attributes: textAttributes)
+        
+        let result = NSMutableAttributedString.init(attributedString: mainTextRow)
+        result.append(NSAttributedString(string: "\n"))
+        result.append(subTextRow)
+        
+        return result
+    }
 }
 
 
@@ -114,32 +125,24 @@ extension CGFloat {
 
 extension CGPoint {
     init(center: CGPoint, radius: CGFloat, degrees: CGFloat) {
-        self.init(
-            x: cos(degrees) * radius + center.x,
-            y: sin(degrees) * radius + center.y
-        )
+        self.init( x: cos(degrees) * radius + center.x,
+                   y: sin(degrees) * radius + center.y)
     }
     
     func projected(by value: CGFloat, angle: CGFloat) -> CGPoint {
-        return CGPoint(
-            x: x + value * cos(angle), y: y + value * sin(angle)
-        )
+        return CGPoint(x: x + value * cos(angle),
+                       y: y + value * sin(angle))
     }
 }
 
 extension CGRect {
     init(centeredOn center: CGPoint, size: CGSize) {
-        self.init(
-            origin: CGPoint(
-                x: center.x - size.width * 0.5, y: center.y - size.height * 0.5
-            ),
-            size: size
-        )
+        self.init( origin: CGPoint(x: center.x - size.width * 0.5,
+                                   y: center.y - size.height * 0.5),
+                   size: size )
     }
     var center: CGPoint {
-        return CGPoint(
-            x: width / 2 + origin.x,
-            y: height / 2 + origin.y
-        )
+        return CGPoint( x: width / 2 + origin.x,
+                        y: height / 2 + origin.y )
     }
 }

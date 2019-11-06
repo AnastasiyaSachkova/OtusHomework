@@ -249,12 +249,7 @@
 				1354193223166DB900F5DEEE /* ViewControllers */,
 				13C862E4233A424F001523AC /* Entities */,
 				6C9B5A48237016C1000FBF82 /* Services */,
-				139BC090231FB1E800D9A7EE /* Protocols */,
-				13072D77233B5D2B00FA34D4 /* Extensions */,
 				1354192D23166D2B00F5DEEE /* UIElements */,
-				13C862D0233A14A0001523AC /* LifecycleBehavior */,
-				13072D7A233B649200FA34D4 /* CollectionLayouts */,
-				13C862DD233A2B50001523AC /* Cells */,
 				1354193123166D9500F5DEEE /* Storyboards */,
 				1354193323166DF800F5DEEE /* Xibs */,
 				1354193023166D6100F5DEEE /* Resurces */,
@@ -339,13 +334,6 @@
 				13C862D1233A14E0001523AC /* ChangeStatusBarColorBehavior.swift */,
 			);
 			path = LifecycleBehavior;
-			sourceTree = "<group>";
-		};
-		13C862DD233A2B50001523AC /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		13C862E4233A424F001523AC /* Entities */ = {
@@ -581,6 +569,10 @@
 		6C9B5A48237016C1000FBF82 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				139BC090231FB1E800D9A7EE /* Protocols */,
+				13072D77233B5D2B00FA34D4 /* Extensions */,
+				13C862D0233A14A0001523AC /* LifecycleBehavior */,
+				13072D7A233B649200FA34D4 /* CollectionLayouts */,
 				13072D7F233B6AB300FA34D4 /* SimpleTimer.swift */,
 				13072D81233B9D3C00FA34D4 /* Initial.swift */,
 				6C9B5A3A237015A6000FBF82 /* Router.swift */,

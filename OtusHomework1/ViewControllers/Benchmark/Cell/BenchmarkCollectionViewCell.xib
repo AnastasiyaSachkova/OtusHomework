@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,8 +24,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svt-ZK-cRI">
                                 <rect key="frame" x="0.0" y="0.0" width="305" height="135"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-XL-EEI" customClass="PieChartView" customModule="OtusHomework1" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="40.5" width="285" height="84.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6I-Jr-PU9">
-                                        <rect key="frame" x="0.0" y="0.0" width="305" height="135"/>
+                                        <rect key="frame" x="0.0" y="10" width="305" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -35,10 +37,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.75757293179999996" green="1" blue="0.77095215719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="v6I-Jr-PU9" firstAttribute="top" secondItem="Svt-ZK-cRI" secondAttribute="top" id="8by-pC-uto"/>
+                                    <constraint firstItem="v6I-Jr-PU9" firstAttribute="top" secondItem="Svt-ZK-cRI" secondAttribute="top" constant="10" id="8by-pC-uto"/>
+                                    <constraint firstItem="sGn-XL-EEI" firstAttribute="top" secondItem="v6I-Jr-PU9" secondAttribute="bottom" constant="10" id="9Hs-F2-l1M"/>
+                                    <constraint firstAttribute="bottom" secondItem="sGn-XL-EEI" secondAttribute="bottom" constant="10" id="CR5-RK-SPB"/>
+                                    <constraint firstItem="sGn-XL-EEI" firstAttribute="leading" secondItem="Svt-ZK-cRI" secondAttribute="leading" constant="10" id="Hfx-PX-lmU"/>
                                     <constraint firstAttribute="trailing" secondItem="v6I-Jr-PU9" secondAttribute="trailing" id="Mxu-uh-Qt4"/>
                                     <constraint firstItem="v6I-Jr-PU9" firstAttribute="leading" secondItem="Svt-ZK-cRI" secondAttribute="leading" id="QtW-te-1Zr"/>
-                                    <constraint firstAttribute="bottom" secondItem="v6I-Jr-PU9" secondAttribute="bottom" id="YOG-82-dmG"/>
+                                    <constraint firstAttribute="trailing" secondItem="sGn-XL-EEI" secondAttribute="trailing" constant="10" id="Tqc-xC-tut"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -54,6 +59,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="305" height="135"/>
             <connections>
+                <outlet property="chartView" destination="sGn-XL-EEI" id="lYh-cH-DeS"/>
                 <outlet property="title" destination="v6I-Jr-PU9" id="gX5-7g-GBL"/>
             </connections>
             <point key="canvasLocation" x="-431.15942028985512" y="170.42410714285714"/>
