@@ -19,7 +19,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupSearchBar()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: self, action: #selector(viewModelstartTest))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: self, action: #selector(startTest))
     }
     
     private func setupSearchBar() {
@@ -39,6 +39,8 @@ class FeedViewController: UIViewController {
         tableView?.delegate = viewModel
         tableView?.register(FeedTableViewCell.nib, forCellReuseIdentifier: FeedTableViewCell.identifier)
     }
+    
+     @objc func startTest(){
+        viewModel.startTest()
+    }
 }
-
-

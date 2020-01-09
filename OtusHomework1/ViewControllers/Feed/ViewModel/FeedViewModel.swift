@@ -17,17 +17,18 @@ class FeedViewModel: NSObject {
     var reloadSections: ((_ section: Int) -> Void)?
     typealias VoidCompletion = () -> Void
     private var findCompletion: VoidCompletion?
-    private var testResult: [String : Double]?
-    private var testTime: Double?
+    
+    var testResult: [String : Double]?
+    var testTime: Double?
     
     private var findFakeDataProvider: FindFakeDataProvider = {
         if let service: FindFakeDataProvider = ServiceLocator.shared.getService() {
             return service
-            }
-//        else {
-//            fatalError()
-//        }
-//
+        }
+        //        else {
+        //            fatalError()
+        //        }
+        //
         return FindFakeDataProvider()
     }()
 }
@@ -42,7 +43,18 @@ extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
             else {
                 return UITableViewCell()
         }
-        cell.set(data: fakeData[indexPath.row], color: UIColor.random)
+        var time: Double?
+        
+        let name = fakeData[indexPath.row].name
+        if let _testResult = self.testResult{
+            if let curentTestResult = _testResult[name] {
+                if let _testTime = self.testTime{
+                    time = curentTestResult * _testTime
+                }
+            }
+        }
+        
+        cell.set(data: fakeData[indexPath.row], color: UIColor.random, time: time)
         return cell
     }
     
@@ -55,7 +67,7 @@ extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
             case "Dictionary": vc = Initial.dictionaryViewController
             case "SuffixArray": vc = Initial.suffixSequenceViewController
             default: vc = Initial.sessionSummaryVC
-
+                
             }
         }
         
@@ -66,42 +78,42 @@ extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension FeedViewModel  {
-    @objc func startTest(){
+    
+    func startTest() {
         let sheduler = Sheduler()
         let count = 10000
-        let queueSuffixArray = JobQueue(jobs: [{
-            _ = SuffixArrayManipulator().setupWithObjectCount(count/10)
-            }])
-        sheduler.addJobQueue(queue: queueSuffixArray, nameQueue: "SuffixArray")
-
-
-
+        
+        //        let queueSuffixArray = JobQueue(jobs: [{
+        //            _ = SuffixArrayManipulator().setupWithObjectCount(count/10)
+        //            }])
+        //        sheduler.addJobQueue(queue: queueSuffixArray, nameQueue: "SuffixArray")
+        
         let queueSwiftArray = JobQueue(jobs: [{
             _ = SwiftArrayManipulator().setupWithObjectCount(count)
             }])
         sheduler.addJobQueue(queue: queueSwiftArray, nameQueue: "Array")
-
-
-//        let queueDictionary = JobQueue(jobs: [{
-//            _ = SwiftDictionaryManipulator().setupWithEntryCount(count)
-//            }])
-//        sheduler.addJobQueue(queue: queueDictionary, nameQueue: "Dictionary")
-//
-//
-//        let queueSet = JobQueue(jobs: [{
-//            _ = SwiftSetManipulator().setupWithObjectCount(count)
-//            }])
-//        sheduler.addJobQueue(queue: queueSet, nameQueue: "Set")
-
+        
+        
+        let queueDictionary = JobQueue(jobs: [{
+            _ = SwiftDictionaryManipulator().setupWithEntryCount(count)
+            }])
+        sheduler.addJobQueue(queue: queueDictionary, nameQueue: "Dictionary")
+        
+        
+        let queueSet = JobQueue(jobs: [{
+            _ = SwiftSetManipulator().setupWithObjectCount(count)
+            }])
+        sheduler.addJobQueue(queue: queueSet, nameQueue: "Set")
+        
         sheduler.start(){
-            self.testResult = sheduler.getResult()
             self.testTime = sheduler.timeOfWork
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.testResult = sheduler.getResult()
+            print( self.testResult, self.testTime)
+            
         }
     }
 }
+
 
 extension FeedViewModel: UISearchBarDelegate, UISearchResultsUpdating {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
@@ -111,12 +123,12 @@ extension FeedViewModel: UISearchBarDelegate, UISearchResultsUpdating {
         //findData.updateSuffixArray()
         //fakeData = findData.findDataByName(text)
     }
-
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
         fakeData = findFakeDataProvider.findDataByName(text)
         //fakeData = findData.findDataByName(text)
     }
-
+    
 }
 

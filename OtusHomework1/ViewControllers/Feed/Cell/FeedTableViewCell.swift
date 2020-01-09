@@ -19,9 +19,12 @@ class FeedTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func set(data:FakeData, color: UIColor) {
+    func set(data:FakeData, color: UIColor, time: Double?) {
         self.title.text = data.name
         backgroundColor = color
+        guard let time = time else {return}
+        self.title.text = data.name + " Time test - " + String(format:"%.4f", time)
     }
     
+  
 }

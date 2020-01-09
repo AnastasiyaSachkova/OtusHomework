@@ -67,11 +67,6 @@
 		6C82BF9723A7CF570062031C /* FindFakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82BF9623A7CF570062031C /* FindFakeDataProvider.swift */; };
 		6C861D1F23C7193E00081EDA /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D1E23C7193E00081EDA /* JobScheduler.swift */; };
 		6C861D2123C7196B00081EDA /* JobQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2023C7196B00081EDA /* JobQueue.swift */; };
-		6C861D2623C72F4500081EDA /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2523C72F4500081EDA /* ArrayManipulator.swift */; };
-		6C861D2823C72F6100081EDA /* SwiftArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2723C72F6100081EDA /* SwiftArrayManipulator.swift */; };
-		6C861D2A23C72F9A00081EDA /* SuffixArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2923C72F9A00081EDA /* SuffixArray.swift */; };
-		6C861D2C23C72FB100081EDA /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2B23C72FB100081EDA /* SuffixArrayManipulator.swift */; };
-		6C861D2E23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2D23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift */; };
 		6C954CF9237D8503009F5512 /* OtusHomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C954CF8237D8503009F5512 /* OtusHomeworkUITests.swift */; };
 		6C954D07237D8515009F5512 /* OtusHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C954D06237D8515009F5512 /* OtusHomeworkTests.swift */; };
 		6C9B5A2A237013A5000FBF82 /* BenchmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A29237013A5000FBF82 /* BenchmarkViewModel.swift */; };
@@ -193,11 +188,6 @@
 		6C82BF9623A7CF570062031C /* FindFakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFakeDataProvider.swift; sourceTree = "<group>"; };
 		6C861D1E23C7193E00081EDA /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
 		6C861D2023C7196B00081EDA /* JobQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQueue.swift; sourceTree = "<group>"; };
-		6C861D2523C72F4500081EDA /* ArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayManipulator.swift; sourceTree = "<group>"; };
-		6C861D2723C72F6100081EDA /* SwiftArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftArrayManipulator.swift; sourceTree = "<group>"; };
-		6C861D2923C72F9A00081EDA /* SuffixArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArray.swift; sourceTree = "<group>"; };
-		6C861D2B23C72FB100081EDA /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
-		6C861D2D23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulatorProtocol.swift; sourceTree = "<group>"; };
 		6C954CF6237D8503009F5512 /* OtusHomeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtusHomeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C954CF8237D8503009F5512 /* OtusHomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtusHomeworkUITests.swift; sourceTree = "<group>"; };
 		6C954CFA237D8503009F5512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -463,8 +453,8 @@
 		6C35A90E23707241005B9A64 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				6C861D2323C72F0E00081EDA /* Array */,
-				6C861D2423C72F1F00081EDA /* Suffix */,
+				6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */,
+				6C35A90F23707266005B9A64 /* ArrayViewController.swift */,
 				6C35A91323707298005B9A64 /* DictionaryViewController.swift */,
 				6C35A915237072B0005B9A64 /* SetViewController.swift */,
 				6C35A917237072C7005B9A64 /* DataStructuresViewController.swift */,
@@ -484,8 +474,8 @@
 		6C35A91F237074F5005B9A64 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				6C35A9242370752E005B9A64 /* Array */,
 				6C35A92223707525005B9A64 /* StringGenerator.swift */,
+				6C35A9242370752E005B9A64 /* Array */,
 				6C35A9332370757A005B9A64 /* SuffixArray */,
 				6C35A92E23707566005B9A64 /* Set */,
 				6C35A92923707546005B9A64 /* Dictionary */,
@@ -546,27 +536,6 @@
 				1354193323166DF800F5DEEE /* Xibs */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		6C861D2323C72F0E00081EDA /* Array */ = {
-			isa = PBXGroup;
-			children = (
-				6C35A90F23707266005B9A64 /* ArrayViewController.swift */,
-				6C861D2523C72F4500081EDA /* ArrayManipulator.swift */,
-				6C861D2723C72F6100081EDA /* SwiftArrayManipulator.swift */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
-		6C861D2423C72F1F00081EDA /* Suffix */ = {
-			isa = PBXGroup;
-			children = (
-				6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */,
-				6C861D2923C72F9A00081EDA /* SuffixArray.swift */,
-				6C861D2B23C72FB100081EDA /* SuffixArrayManipulator.swift */,
-				6C861D2D23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift */,
-			);
-			path = Suffix;
 			sourceTree = "<group>";
 		};
 		6C954CF7237D8503009F5512 /* OtusHomeworkUITests */ = {
@@ -916,10 +885,8 @@
 				6C9B5A4423701618000FBF82 /* UIApplication+Extension.swift in Sources */,
 				6C35A8FF237050AF005B9A64 /* Mathes.swift in Sources */,
 				6C9B5A2A237013A5000FBF82 /* BenchmarkViewModel.swift in Sources */,
-				6C861D2C23C72FB100081EDA /* SuffixArrayManipulator.swift in Sources */,
 				13C862D2233A14E0001523AC /* ChangeStatusBarColorBehavior.swift in Sources */,
 				6C861D1F23C7193E00081EDA /* JobScheduler.swift in Sources */,
-				6C861D2A23C72F9A00081EDA /* SuffixArray.swift in Sources */,
 				1354193723166E7C00F5DEEE /* CustomView.swift in Sources */,
 				13541946231673EB00F5DEEE /* CustomImageView.swift in Sources */,
 				6C9B5A2C237013C8000FBF82 /* BanchmarcCellModel.swift in Sources */,
@@ -940,8 +907,6 @@
 				13C862EA233A471A001523AC /* BenchmarkCollectionViewCell.swift in Sources */,
 				6C9B5A4C2370177F000FBF82 /* TabBarViewController.swift in Sources */,
 				139BC08F231FB02500D9A7EE /* LifecycleBehaviorsViewController.swift in Sources */,
-				6C861D2823C72F6100081EDA /* SwiftArrayManipulator.swift in Sources */,
-				6C861D2623C72F4500081EDA /* ArrayManipulator.swift in Sources */,
 				6C35A93223707575005B9A64 /* SetManipulator.swift in Sources */,
 				6C35A93123707575005B9A64 /* SwiftSetManipulator.swift in Sources */,
 				6C9B5A402370160E000FBF82 /* UITableViewCell+Extensions.swift in Sources */,
@@ -951,7 +916,6 @@
 				139BC092231FB21A00D9A7EE /* LifecycleBehaviorProtocol.swift in Sources */,
 				6C35A92323707525005B9A64 /* StringGenerator.swift in Sources */,
 				13072D80233B6AB300FA34D4 /* SimpleTimer.swift in Sources */,
-				6C861D2E23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

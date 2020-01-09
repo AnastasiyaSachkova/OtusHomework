@@ -55,3 +55,4 @@ struct SuffixArray {
         suffixes.sort { $0.0 < $1.0 }
     }
 }
+
