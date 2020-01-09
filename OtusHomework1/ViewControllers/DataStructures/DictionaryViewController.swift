@@ -52,20 +52,43 @@ class DictionaryViewController: DataStructuresViewController {
     creationTime = dictionaryManipulator.setupWithEntryCount(size)
   }
 
-  override func test() {
-    if dictionaryManipulator.dictHasEntries() {
-      add1EntryTime = dictionaryManipulator.add1Entry()
-      add5EntriesTime = dictionaryManipulator.add5Entries()
-      add10EntriesTime = dictionaryManipulator.add10Entries()
-      remove1EntryTime = dictionaryManipulator.remove1Entry()
-      remove5EntriesTime = dictionaryManipulator.remove5Entries()
-      remove10EntriesTime = dictionaryManipulator.remove10Entries()
-      lookup1EntryTime = dictionaryManipulator.lookup1EntryTime()
-      lookup10EntriesTime = dictionaryManipulator.lookup10EntriesTime()
+ override func test(finishHandler: @escaping ()->()) {
+    if (dictionaryManipulator.dictHasEntries()) {
+        let queue = JobQueue2.init {
+            finishHandler()
+        }
+        
+        queue.add {
+            self.add1EntryTime = self.dictionaryManipulator.add1Entry()
+        }
+        queue.add {
+            self.add5EntriesTime = self.dictionaryManipulator.add5Entries()
+        }
+        queue.add {
+            self.add10EntriesTime = self.dictionaryManipulator.add10Entries()
+        }
+        queue.add {
+            self.remove1EntryTime = self.dictionaryManipulator.remove1Entry()
+        }
+        queue.add {
+            self.remove5EntriesTime = self.dictionaryManipulator.remove5Entries()
+        }
+        queue.add {
+            self.remove10EntriesTime = self.dictionaryManipulator.remove10Entries()
+        }
+        queue.add {
+            self.lookup1EntryTime = self.dictionaryManipulator.lookup1EntryTime()
+        }
+        queue.add {
+            self.lookup10EntriesTime = self.dictionaryManipulator.lookup10EntriesTime()
+        }
+      
+        queue.run()
     } else {
-      print("Dictionary not yet set up")
+      print("Array not set up yet!")
     }
   }
+
 
   //MARK: Table View Override
 

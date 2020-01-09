@@ -44,11 +44,21 @@ class SuffixSequenceViewController: DataStructuresViewController {
         creationTime = suffixArrayManipulator.setup()
       }
 
-    override func test() {
+    override func test(finishHandler: @escaping ()->()) {
         if (suffixArrayManipulator.suffixArrayHasObjects()) {
-            changingSuffixesTime = suffixArrayManipulator.changeEachSuffix()
-            reverseSuffixArrayTime = suffixArrayManipulator.reverseSuffixArray()
-            searchFor10TripplesTime = suffixArrayManipulator.searchFor10Tripples().0
+            let queue = JobQueue2.init {
+                finishHandler()
+            }
+            queue.add {
+                self.changingSuffixesTime = self.suffixArrayManipulator.changeEachSuffix()
+            }
+            queue.add {
+                self.reverseSuffixArrayTime = self.suffixArrayManipulator.reverseSuffixArray()
+            }
+            queue.add {
+                self.searchFor10TripplesTime = self.suffixArrayManipulator.searchFor10Tripples().0
+            }
+            queue.run()
         } else {
             print("SuffixArray is not set up yet")
         }

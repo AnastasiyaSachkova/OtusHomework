@@ -51,18 +51,40 @@ class ArrayViewController: DataStructuresViewController {
     creationTime = arrayManipulator.setupWithObjectCount(size)
   }
 
-  override func test() {
+  override func test(finishHandler: @escaping ()->()) {
     if (arrayManipulator.arrayHasObjects()) {
-      insertAt0Time = arrayManipulator.insertNewObjectAtBeginning()
-      insertAtMidTime = arrayManipulator.insertNewObjectInMiddle()
-      insertAtEndTime = arrayManipulator.addNewObjectAtEnd()
-      removeAt0Time = arrayManipulator.removeFirstObject()
-      removeAtMidTime = arrayManipulator.removeMiddleObject()
-      removeAtEndTime = arrayManipulator.removeLastObject()
-      lookupByIndexTime = arrayManipulator.lookupByIndex()
-      lookupByObjectTime = arrayManipulator.lookupByObject()
+        let queue = JobQueue2.init {
+            finishHandler()
+        }
+        
+        queue.add {
+            self.insertAt0Time = self.arrayManipulator.insertNewObjectAtBeginning()
+        }
+        queue.add {
+            self.insertAtMidTime = self.arrayManipulator.insertNewObjectInMiddle()
+        }
+        queue.add {
+            self.insertAtEndTime = self.arrayManipulator.addNewObjectAtEnd()
+        }
+        queue.add {
+            self.removeAt0Time = self.arrayManipulator.removeFirstObject()
+        }
+        queue.add {
+            self.removeAtMidTime = self.arrayManipulator.removeMiddleObject()
+        }
+        queue.add {
+            self.removeAtEndTime = self.arrayManipulator.removeLastObject()
+        }
+        queue.add {
+            self.lookupByIndexTime = self.arrayManipulator.lookupByIndex()
+        }
+        queue.add {
+            self.lookupByObjectTime = self.arrayManipulator.lookupByObject()
+        }
+      
+        queue.run()
     } else {
-      print("Array not set up yet")
+      print("Array not set up yet!")
     }
   }
     
