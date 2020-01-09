@@ -22,22 +22,12 @@ class OtusHomeworkUITests: XCTestCase {
     }
     
     func testStratApp() {
-         //  app.navigationBars["Feed"].otherElements["Feed"].tap()
-         //  app.tables.staticTexts["SuffixArray"].tap()
-         //  app.buttons["Create Suffix Array and Test"].tap()
-           
-           let tabBarsQuery = app.tabBars
-           let benchmarkButton = tabBarsQuery.buttons["Benchmark"]
-           benchmarkButton.tap()
-           tabBarsQuery.buttons["Profile"].tap()
-           benchmarkButton.tap()
-           
-           let benchmarkNavigationBar = app.navigationBars["Benchmark"]
-          // benchmarkNavigationBar.buttons["Update PieCharts"].tap()
-          // benchmarkNavigationBar.buttons["Update layout"].tap()
-           tabBarsQuery.buttons["Feed"].tap()
-          // app.navigationBars["Otus_HW_16.SuffixArrayView"].buttons["Назад"].tap()
-       }
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Benchmark"].tap()
+        tabBarsQuery.buttons["Profile"].tap()
+        tabBarsQuery.buttons["Feed"].tap()
+    }
 
 
     func testLaunchPerformance() {
