@@ -19,6 +19,7 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupSearchBar()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: self, action: #selector(viewModelstartTest))
     }
     
     private func setupSearchBar() {

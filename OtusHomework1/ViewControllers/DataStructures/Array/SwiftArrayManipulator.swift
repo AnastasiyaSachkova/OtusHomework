@@ -1,9 +1,9 @@
 //
 //  SwiftArrayManipulator.swift
-//  DataStructures
+//  OtusHomework1
 //
-//  Created by Ellen Shapiro on 8/3/14.
-//  Copyright (c) 2014 Ray Wenderlich Tutorial Team. All rights reserved.
+//  Created by 7Winds on 09.01.2020.
+//  Copyright © 2020 Anastasiya Sachkova. All rights reserved.
 //
 
 import Foundation
@@ -27,6 +27,7 @@ open class SwiftArrayManipulator: ArrayManipulator {
       }
     }
   }
+    
   
   fileprivate func nextElement() -> Int {
     return intArray.count + 1
@@ -40,9 +41,9 @@ open class SwiftArrayManipulator: ArrayManipulator {
       self.intArray.insert(next, at: 0)
     }
     
-    assert(intArray[0] == next, "First object was not changed")
+    assert(intArray[0] == next, "First object was not changed!")
     intArray.remove(at: 0)
-    assert(intArray[0] != next, "First object not back to original")
+    assert(intArray[0] != next, "First object not back to original!")
     
     return time
   }
@@ -56,12 +57,12 @@ open class SwiftArrayManipulator: ArrayManipulator {
       self.intArray.insert(next, at: middleIndex)
     }
     
-    assert(intArray[middleIndex] == next, "Middle object didn't change")
+    assert(intArray[middleIndex] == next, "Middle object didn't change!")
     
     //Reset
     self.intArray.remove(at: middleIndex)
     
-    assert(intArray[middleIndex] != next, "Middle object is not the same after removal")
+    assert(intArray[middleIndex] != next, "Middle object is not the same after removal!")
     
     return time
   }
@@ -85,9 +86,9 @@ open class SwiftArrayManipulator: ArrayManipulator {
       self.intArray.remove(at: 0)
     }
     
-    assert(intArray[0] != originalFirst, "First object didn't change")
+    assert(intArray[0] != originalFirst, "First object didn't change!")
     intArray.insert(originalFirst, at: 0)
-    assert(intArray[0] == originalFirst, "First object is not the same after removal")
+    assert(intArray[0] == originalFirst, "First object is not the same after removal!")
     return time
   }
   
@@ -100,9 +101,9 @@ open class SwiftArrayManipulator: ArrayManipulator {
       self.intArray.remove(at: middleIndex)
     }
     
-    assert(intArray[middleIndex] != originalMiddle, "Middle object didn't change")
+    assert(intArray[middleIndex] != originalMiddle, "Middle object didn't change!")
     intArray.insert(originalMiddle, at: middleIndex)
-    assert(intArray[middleIndex] == originalMiddle, "Middle object is not the same after being added back")
+    assert(intArray[middleIndex] == originalMiddle, "Middle object is not the same after being added back!")
     
     return time
   }

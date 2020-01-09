@@ -11,7 +11,16 @@ import UIKit
 
 class BenchmarkViewModel: NSObject {
     
-    private var fakeData: [FakeData] = FakeDataProvider().loadFakeData()
+    private var fakeDataProvider: FakeDataProvider = {
+        if let service: FakeDataProvider = ServiceLocator.shared.getService() {
+            return service
+        } else {
+            fatalError()
+        }
+    }()
+    
+  //  private var fakeData: [FakeData] = FakeDataProvider().loadFakeData()
+    
     var reloadSections: ((_ section: Int) -> Void)?
     var timerModels = [IndexPath:TimerModel]()
     let layout = UICollectionViewFlowLayout()
@@ -25,7 +34,7 @@ class BenchmarkViewModel: NSObject {
 extension BenchmarkViewModel: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fakeData.count
+        return fakeDataProvider.loadFakeData().count//fakeData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -33,7 +42,8 @@ extension BenchmarkViewModel: UICollectionViewDataSource, UICollectionViewDelega
             else {
                 return UICollectionViewCell()
         }
-        cell.set(data: fakeData[indexPath.row])
+       // cell.set(data: fakeData[indexPath.row])
+        cell.set(data: fakeDataProvider.loadFakeData()[indexPath.row])
         return cell
     }
     
@@ -83,6 +93,6 @@ extension BenchmarkViewModel: UICollectionViewDelegateFlowLayout {
 
 extension BenchmarkViewModel: CustomCollectionViewDelegate {
     func numberOfItemsInCollectionView() -> Int {
-        return fakeData.count
+        return fakeDataProvider.loadFakeData().count//fakeData.count
     }
 }

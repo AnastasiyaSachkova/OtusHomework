@@ -156,9 +156,9 @@ class DataStructuresViewController: UIViewController, UITableViewDataSource, UIT
     //In the superclass, just return an empty cell
     let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "REUSE")
 
-    cell.textLabel!.text = "OVERRIDE"
-    cell.detailTextLabel!.text = "in subclass!"
-    cell.detailTextLabel!.textColor = UIColor.black
+    cell.textLabel?.text = "OVERRIDE"
+    cell.detailTextLabel?.text = "in subclass"
+    cell.detailTextLabel?.textColor = UIColor.black
     cell.selectionStyle = UITableViewCell.SelectionStyle.none
     return cell
   }

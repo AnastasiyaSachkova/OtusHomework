@@ -62,7 +62,19 @@
 		6C35A93623707590005B9A64 /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A93423707590005B9A64 /* SuffixArrayManipulator.swift */; };
 		6C35A93723707590005B9A64 /* SwiftSuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35A93523707590005B9A64 /* SwiftSuffixArrayManipulator.swift */; };
 		6C6679B5237161EA0067BAF8 /* DataStructures.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C6679B3237161E90067BAF8 /* DataStructures.storyboard */; };
-		6C9B5A2A237013A5000FBF82 /* BenchmarkiewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A29237013A5000FBF82 /* BenchmarkiewModel.swift */; };
+		6C82BF9323A7CB7A0062031C /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82BF9223A7CB7A0062031C /* ServiceLocator.swift */; };
+		6C82BF9523A7CBB60062031C /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82BF9423A7CBB60062031C /* Services.swift */; };
+		6C82BF9723A7CF570062031C /* FindFakeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C82BF9623A7CF570062031C /* FindFakeDataProvider.swift */; };
+		6C861D1F23C7193E00081EDA /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D1E23C7193E00081EDA /* JobScheduler.swift */; };
+		6C861D2123C7196B00081EDA /* JobQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2023C7196B00081EDA /* JobQueue.swift */; };
+		6C861D2623C72F4500081EDA /* ArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2523C72F4500081EDA /* ArrayManipulator.swift */; };
+		6C861D2823C72F6100081EDA /* SwiftArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2723C72F6100081EDA /* SwiftArrayManipulator.swift */; };
+		6C861D2A23C72F9A00081EDA /* SuffixArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2923C72F9A00081EDA /* SuffixArray.swift */; };
+		6C861D2C23C72FB100081EDA /* SuffixArrayManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2B23C72FB100081EDA /* SuffixArrayManipulator.swift */; };
+		6C861D2E23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C861D2D23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift */; };
+		6C954CF9237D8503009F5512 /* OtusHomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C954CF8237D8503009F5512 /* OtusHomeworkUITests.swift */; };
+		6C954D07237D8515009F5512 /* OtusHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C954D06237D8515009F5512 /* OtusHomeworkTests.swift */; };
+		6C9B5A2A237013A5000FBF82 /* BenchmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A29237013A5000FBF82 /* BenchmarkViewModel.swift */; };
 		6C9B5A2C237013C8000FBF82 /* BanchmarcCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A2B237013C8000FBF82 /* BanchmarcCellModel.swift */; };
 		6C9B5A302370143E000FBF82 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A2F2370143E000FBF82 /* FeedViewModel.swift */; };
 		6C9B5A372370153F000FBF82 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B5A362370153F000FBF82 /* PieChart.swift */; };
@@ -81,6 +93,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6C954CFB237D8503009F5512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 135419102316690F00F5DEEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 135419172316690F00F5DEEE;
+			remoteInfo = OtusHomework1;
+		};
+		6C954D09237D8515009F5512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 135419102316690F00F5DEEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 135419172316690F00F5DEEE;
+			remoteInfo = OtusHomework1;
+		};
 		6C9B5A59237017F1000FBF82 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 135419102316690F00F5DEEE /* Project object */;
@@ -162,7 +188,23 @@
 		6C35A93423707590005B9A64 /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		6C35A93523707590005B9A64 /* SwiftSuffixArrayManipulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSuffixArrayManipulator.swift; sourceTree = "<group>"; };
 		6C6679B4237161E90067BAF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = OtusHomework1/Storyboards/Base.lproj/DataStructures.storyboard; sourceTree = "<group>"; };
-		6C9B5A29237013A5000FBF82 /* BenchmarkiewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkiewModel.swift; sourceTree = "<group>"; };
+		6C82BF9223A7CB7A0062031C /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		6C82BF9423A7CBB60062031C /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		6C82BF9623A7CF570062031C /* FindFakeDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFakeDataProvider.swift; sourceTree = "<group>"; };
+		6C861D1E23C7193E00081EDA /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
+		6C861D2023C7196B00081EDA /* JobQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQueue.swift; sourceTree = "<group>"; };
+		6C861D2523C72F4500081EDA /* ArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayManipulator.swift; sourceTree = "<group>"; };
+		6C861D2723C72F6100081EDA /* SwiftArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftArrayManipulator.swift; sourceTree = "<group>"; };
+		6C861D2923C72F9A00081EDA /* SuffixArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArray.swift; sourceTree = "<group>"; };
+		6C861D2B23C72FB100081EDA /* SuffixArrayManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulator.swift; sourceTree = "<group>"; };
+		6C861D2D23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixArrayManipulatorProtocol.swift; sourceTree = "<group>"; };
+		6C954CF6237D8503009F5512 /* OtusHomeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtusHomeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C954CF8237D8503009F5512 /* OtusHomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtusHomeworkUITests.swift; sourceTree = "<group>"; };
+		6C954CFA237D8503009F5512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C954D04237D8515009F5512 /* OtusHomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtusHomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C954D06237D8515009F5512 /* OtusHomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtusHomeworkTests.swift; sourceTree = "<group>"; };
+		6C954D08237D8515009F5512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C9B5A29237013A5000FBF82 /* BenchmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkViewModel.swift; sourceTree = "<group>"; };
 		6C9B5A2B237013C8000FBF82 /* BanchmarcCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchmarcCellModel.swift; sourceTree = "<group>"; };
 		6C9B5A2F2370143E000FBF82 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		6C9B5A362370153F000FBF82 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
@@ -185,6 +227,20 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		135419152316690F00F5DEEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C954CF3237D8503009F5512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C954D01237D8515009F5512 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,6 +283,8 @@
 			children = (
 				1354191A2316690F00F5DEEE /* OtusHomework1 */,
 				6C9B5A52237017F1000FBF82 /* ShareExtension */,
+				6C954CF7237D8503009F5512 /* OtusHomeworkUITests */,
+				6C954D05237D8515009F5512 /* OtusHomeworkTests */,
 				135419192316690F00F5DEEE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -236,6 +294,8 @@
 			children = (
 				135419182316690F00F5DEEE /* OtusHomework1.app */,
 				6C9B5A51237017F1000FBF82 /* ShareExtension.appex */,
+				6C954CF6237D8503009F5512 /* OtusHomeworkUITests.xctest */,
+				6C954D04237D8515009F5512 /* OtusHomeworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,9 +309,7 @@
 				1354193223166DB900F5DEEE /* ViewControllers */,
 				13C862E4233A424F001523AC /* Entities */,
 				6C9B5A48237016C1000FBF82 /* Services */,
-				1354192D23166D2B00F5DEEE /* UIElements */,
-				1354193123166D9500F5DEEE /* Storyboards */,
-				1354193323166DF800F5DEEE /* Xibs */,
+				6C861D2223C719CE00081EDA /* UI */,
 				1354193023166D6100F5DEEE /* Resurces */,
 			);
 			path = OtusHomework1;
@@ -396,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				6C9B5A49237016EA000FBF82 /* FakeDataProvider.swift */,
+				6C82BF9623A7CF570062031C /* FindFakeDataProvider.swift */,
 				6C35A904237070DD005B9A64 /* AlgoProvider.swift */,
 			);
 			path = Providers;
@@ -404,8 +463,8 @@
 		6C35A90E23707241005B9A64 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				6C35A90F23707266005B9A64 /* ArrayViewController.swift */,
-				6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */,
+				6C861D2323C72F0E00081EDA /* Array */,
+				6C861D2423C72F1F00081EDA /* Suffix */,
 				6C35A91323707298005B9A64 /* DictionaryViewController.swift */,
 				6C35A915237072B0005B9A64 /* SetViewController.swift */,
 				6C35A917237072C7005B9A64 /* DataStructuresViewController.swift */,
@@ -470,6 +529,64 @@
 			path = SuffixArray;
 			sourceTree = "<group>";
 		};
+		6C861D1D23C7190900081EDA /* JobQueue */ = {
+			isa = PBXGroup;
+			children = (
+				6C861D1E23C7193E00081EDA /* JobScheduler.swift */,
+				6C861D2023C7196B00081EDA /* JobQueue.swift */,
+			);
+			path = JobQueue;
+			sourceTree = "<group>";
+		};
+		6C861D2223C719CE00081EDA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1354192D23166D2B00F5DEEE /* UIElements */,
+				1354193123166D9500F5DEEE /* Storyboards */,
+				1354193323166DF800F5DEEE /* Xibs */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6C861D2323C72F0E00081EDA /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A90F23707266005B9A64 /* ArrayViewController.swift */,
+				6C861D2523C72F4500081EDA /* ArrayManipulator.swift */,
+				6C861D2723C72F6100081EDA /* SwiftArrayManipulator.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		6C861D2423C72F1F00081EDA /* Suffix */ = {
+			isa = PBXGroup;
+			children = (
+				6C35A91123707280005B9A64 /* SuffixSequenceViewController.swift */,
+				6C861D2923C72F9A00081EDA /* SuffixArray.swift */,
+				6C861D2B23C72FB100081EDA /* SuffixArrayManipulator.swift */,
+				6C861D2D23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift */,
+			);
+			path = Suffix;
+			sourceTree = "<group>";
+		};
+		6C954CF7237D8503009F5512 /* OtusHomeworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6C954CF8237D8503009F5512 /* OtusHomeworkUITests.swift */,
+				6C954CFA237D8503009F5512 /* Info.plist */,
+			);
+			path = OtusHomeworkUITests;
+			sourceTree = "<group>";
+		};
+		6C954D05237D8515009F5512 /* OtusHomeworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C954D06237D8515009F5512 /* OtusHomeworkTests.swift */,
+				6C954D08237D8515009F5512 /* Info.plist */,
+			);
+			path = OtusHomeworkTests;
+			sourceTree = "<group>";
+		};
 		6C9B5A2523701324000FBF82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,7 +609,7 @@
 		6C9B5A2723701353000FBF82 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6C9B5A29237013A5000FBF82 /* BenchmarkiewModel.swift */,
+				6C9B5A29237013A5000FBF82 /* BenchmarkViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -569,6 +686,8 @@
 		6C9B5A48237016C1000FBF82 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6C861D1D23C7190900081EDA /* JobQueue */,
+				6C82BF9223A7CB7A0062031C /* ServiceLocator.swift */,
 				139BC090231FB1E800D9A7EE /* Protocols */,
 				13072D77233B5D2B00FA34D4 /* Extensions */,
 				13C862D0233A14A0001523AC /* LifecycleBehavior */,
@@ -580,6 +699,7 @@
 				6C35A9022370707C005B9A64 /* SuffixIterator.swift */,
 				6C35A91E237074D8005B9A64 /* Profiler */,
 				6C35A90D237071E3005B9A64 /* Providers */,
+				6C82BF9423A7CBB60062031C /* Services.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -617,6 +737,42 @@
 			productReference = 135419182316690F00F5DEEE /* OtusHomework1.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6C954CF5237D8503009F5512 /* OtusHomeworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C954CFF237D8503009F5512 /* Build configuration list for PBXNativeTarget "OtusHomeworkUITests" */;
+			buildPhases = (
+				6C954CF2237D8503009F5512 /* Sources */,
+				6C954CF3237D8503009F5512 /* Frameworks */,
+				6C954CF4237D8503009F5512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C954CFC237D8503009F5512 /* PBXTargetDependency */,
+			);
+			name = OtusHomeworkUITests;
+			productName = OtusHomeworkUITests;
+			productReference = 6C954CF6237D8503009F5512 /* OtusHomeworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6C954D03237D8515009F5512 /* OtusHomeworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C954D0B237D8515009F5512 /* Build configuration list for PBXNativeTarget "OtusHomeworkTests" */;
+			buildPhases = (
+				6C954D00237D8515009F5512 /* Sources */,
+				6C954D01237D8515009F5512 /* Frameworks */,
+				6C954D02237D8515009F5512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C954D0A237D8515009F5512 /* PBXTargetDependency */,
+			);
+			name = OtusHomeworkTests;
+			productName = OtusHomeworkTests;
+			productReference = 6C954D04237D8515009F5512 /* OtusHomeworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6C9B5A50237017F1000FBF82 /* ShareExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C9B5A5C237017F1000FBF82 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
@@ -647,6 +803,14 @@
 					135419172316690F00F5DEEE = {
 						CreatedOnToolsVersion = 10.3;
 					};
+					6C954CF5237D8503009F5512 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 135419172316690F00F5DEEE;
+					};
+					6C954D03237D8515009F5512 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 135419172316690F00F5DEEE;
+					};
 					6C9B5A50237017F1000FBF82 = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -667,6 +831,8 @@
 			targets = (
 				135419172316690F00F5DEEE /* OtusHomework1 */,
 				6C9B5A50237017F1000FBF82 /* ShareExtension */,
+				6C954CF5237D8503009F5512 /* OtusHomeworkUITests */,
+				6C954D03237D8515009F5512 /* OtusHomeworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -691,6 +857,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C954CF4237D8503009F5512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C954D02237D8515009F5512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C9B5A4F237017F1000FBF82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,6 +891,7 @@
 				13072D79233B5D4500FA34D4 /* UIColor+Random.swift in Sources */,
 				6C35A916237072B0005B9A64 /* SetViewController.swift in Sources */,
 				6C9B5A372370153F000FBF82 /* PieChart.swift in Sources */,
+				6C82BF9523A7CBB60062031C /* Services.swift in Sources */,
 				6C35A91223707280005B9A64 /* SuffixSequenceViewController.swift in Sources */,
 				13F57B63233CA4E800B11B34 /* FeedTableViewCell.swift in Sources */,
 				6C9B5A4A237016EA000FBF82 /* FakeDataProvider.swift in Sources */,
@@ -721,6 +902,7 @@
 				6C35A905237070DD005B9A64 /* AlgoProvider.swift in Sources */,
 				13C862C7233A05BC001523AC /* BenchmarkViewController.swift in Sources */,
 				6C9B5A3B237015A6000FBF82 /* Router.swift in Sources */,
+				6C82BF9323A7CB7A0062031C /* ServiceLocator.swift in Sources */,
 				13072D82233B9D3C00FA34D4 /* Initial.swift in Sources */,
 				6C35A9032370707C005B9A64 /* SuffixIterator.swift in Sources */,
 				6C9B5A4523701618000FBF82 /* UICollectionViewCell+Extension.swift in Sources */,
@@ -733,8 +915,11 @@
 				13C862CF233A1049001523AC /* TimerBehavior.swift in Sources */,
 				6C9B5A4423701618000FBF82 /* UIApplication+Extension.swift in Sources */,
 				6C35A8FF237050AF005B9A64 /* Mathes.swift in Sources */,
-				6C9B5A2A237013A5000FBF82 /* BenchmarkiewModel.swift in Sources */,
+				6C9B5A2A237013A5000FBF82 /* BenchmarkViewModel.swift in Sources */,
+				6C861D2C23C72FB100081EDA /* SuffixArrayManipulator.swift in Sources */,
 				13C862D2233A14E0001523AC /* ChangeStatusBarColorBehavior.swift in Sources */,
+				6C861D1F23C7193E00081EDA /* JobScheduler.swift in Sources */,
+				6C861D2A23C72F9A00081EDA /* SuffixArray.swift in Sources */,
 				1354193723166E7C00F5DEEE /* CustomView.swift in Sources */,
 				13541946231673EB00F5DEEE /* CustomImageView.swift in Sources */,
 				6C9B5A2C237013C8000FBF82 /* BanchmarcCellModel.swift in Sources */,
@@ -748,20 +933,41 @@
 				6C35A92C2370755A005B9A64 /* DictionaryManipulator.swift in Sources */,
 				13C862D8233A1931001523AC /* ThirdViewController.swift in Sources */,
 				135419482316742700F5DEEE /* CustomSwitch.swift in Sources */,
+				6C82BF9723A7CF570062031C /* FindFakeDataProvider.swift in Sources */,
 				6C35A91023707266005B9A64 /* ArrayViewController.swift in Sources */,
 				1354191C2316690F00F5DEEE /* AppDelegate.swift in Sources */,
 				1354192F23166D5800F5DEEE /* CustomButton.swift in Sources */,
 				13C862EA233A471A001523AC /* BenchmarkCollectionViewCell.swift in Sources */,
 				6C9B5A4C2370177F000FBF82 /* TabBarViewController.swift in Sources */,
 				139BC08F231FB02500D9A7EE /* LifecycleBehaviorsViewController.swift in Sources */,
+				6C861D2823C72F6100081EDA /* SwiftArrayManipulator.swift in Sources */,
+				6C861D2623C72F4500081EDA /* ArrayManipulator.swift in Sources */,
 				6C35A93223707575005B9A64 /* SetManipulator.swift in Sources */,
 				6C35A93123707575005B9A64 /* SwiftSetManipulator.swift in Sources */,
 				6C9B5A402370160E000FBF82 /* UITableViewCell+Extensions.swift in Sources */,
 				6C35A93623707590005B9A64 /* SuffixArrayManipulator.swift in Sources */,
+				6C861D2123C7196B00081EDA /* JobQueue.swift in Sources */,
 				6C9B5A4723701651000FBF82 /* NavigationProtocol.swift in Sources */,
 				139BC092231FB21A00D9A7EE /* LifecycleBehaviorProtocol.swift in Sources */,
 				6C35A92323707525005B9A64 /* StringGenerator.swift in Sources */,
 				13072D80233B6AB300FA34D4 /* SimpleTimer.swift in Sources */,
+				6C861D2E23C72FC700081EDA /* SuffixArrayManipulatorProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C954CF2237D8503009F5512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C954CF9237D8503009F5512 /* OtusHomeworkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C954D00237D8515009F5512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C954D07237D8515009F5512 /* OtusHomeworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -776,6 +982,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6C954CFC237D8503009F5512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 135419172316690F00F5DEEE /* OtusHomework1 */;
+			targetProxy = 6C954CFB237D8503009F5512 /* PBXContainerItemProxy */;
+		};
+		6C954D0A237D8515009F5512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 135419172316690F00F5DEEE /* OtusHomework1 */;
+			targetProxy = 6C954D09237D8515009F5512 /* PBXContainerItemProxy */;
+		};
 		6C9B5A5A237017F1000FBF82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6C9B5A50237017F1000FBF82 /* ShareExtension */;
@@ -1007,6 +1223,88 @@
 			};
 			name = Release;
 		};
+		6C954CFD237D8503009F5512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVFLN53RM6;
+				INFOPLIST_FILE = OtusHomeworkUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Anastasiya-Sachkova.OtusHomework1.OtusHomeworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OtusHomework1;
+			};
+			name = Debug;
+		};
+		6C954CFE237D8503009F5512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVFLN53RM6;
+				INFOPLIST_FILE = OtusHomeworkUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Anastasiya-Sachkova.OtusHomework1.OtusHomeworkUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OtusHomework1;
+			};
+			name = Release;
+		};
+		6C954D0C237D8515009F5512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVFLN53RM6;
+				INFOPLIST_FILE = OtusHomeworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Anastasiya-Sachkova.OtusHomework1.OtusHomeworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OtusHomework1.app/OtusHomework1";
+			};
+			name = Debug;
+		};
+		6C954D0D237D8515009F5512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LVFLN53RM6;
+				INFOPLIST_FILE = OtusHomeworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Anastasiya-Sachkova.OtusHomework1.OtusHomeworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OtusHomework1.app/OtusHomework1";
+			};
+			name = Release;
+		};
 		6C9B5A5D237017F1000FBF82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1066,6 +1364,24 @@
 			buildConfigurations = (
 				1354192B2316691100F5DEEE /* Debug */,
 				1354192C2316691100F5DEEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C954CFF237D8503009F5512 /* Build configuration list for PBXNativeTarget "OtusHomeworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C954CFD237D8503009F5512 /* Debug */,
+				6C954CFE237D8503009F5512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C954D0B237D8515009F5512 /* Build configuration list for PBXNativeTarget "OtusHomeworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C954D0C237D8515009F5512 /* Debug */,
+				6C954D0D237D8515009F5512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

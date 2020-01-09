@@ -63,7 +63,7 @@ class SetViewController: DataStructuresViewController {
       lookup1ObjectTime = setManipulator.lookup1Object()
       lookup10ObjectsTime = setManipulator.lookup10Objects()
     } else {
-      print("Set is not set up yet!")
+      print("Set is not set up yet")
     }
   }
 
@@ -74,34 +74,34 @@ class SetViewController: DataStructuresViewController {
 
     switch (indexPath as NSIndexPath).row {
     case SetVCRow.creation.rawValue:
-      cell.textLabel!.text = "Set Creation:"
-      cell.detailTextLabel!.text = formattedTime(creationTime)
+      cell.textLabel?.text = "Set Creation:"
+      cell.detailTextLabel?.text = formattedTime(creationTime)
     case SetVCRow.add1Object.rawValue:
-      cell.textLabel!.text = "Add 1 Object:"
-      cell.detailTextLabel!.text = formattedTime(add1ObjectTime)
+      cell.textLabel?.text = "Add 1 Object:"
+      cell.detailTextLabel?.text = formattedTime(add1ObjectTime)
     case SetVCRow.add5Objects.rawValue:
-      cell.textLabel!.text = "Add 5 Objects:"
-      cell.detailTextLabel!.text = formattedTime(add5ObjectsTime)
+      cell.textLabel?.text = "Add 5 Objects:"
+      cell.detailTextLabel?.text = formattedTime(add5ObjectsTime)
     case SetVCRow.add10Objects.rawValue:
-      cell.textLabel!.text = "Add 10 Objects:"
-      cell.detailTextLabel!.text = formattedTime(add10ObjectsTime)
+      cell.textLabel?.text = "Add 10 Objects:"
+      cell.detailTextLabel?.text = formattedTime(add10ObjectsTime)
     case SetVCRow.remove1Object.rawValue:
-      cell.textLabel!.text = "Remove 1 Object:"
-      cell.detailTextLabel!.text = formattedTime(remove1ObjectTime)
+      cell.textLabel?.text = "Remove 1 Object:"
+      cell.detailTextLabel?.text = formattedTime(remove1ObjectTime)
     case SetVCRow.remove5Objects.rawValue:
-      cell.textLabel!.text = "Remove 5 Objects:"
-      cell.detailTextLabel!.text = formattedTime(remove5ObjectsTime)
+      cell.textLabel?.text = "Remove 5 Objects:"
+      cell.detailTextLabel?.text = formattedTime(remove5ObjectsTime)
     case SetVCRow.remove10Objects.rawValue:
-      cell.textLabel!.text = "Remove 10 Objects:"
-      cell.detailTextLabel!.text = formattedTime(remove10ObjectsTime)
+      cell.textLabel?.text = "Remove 10 Objects:"
+      cell.detailTextLabel?.text = formattedTime(remove10ObjectsTime)
     case SetVCRow.lookup1Object.rawValue:
-      cell.textLabel!.text = "Lookup 1 Object:"
-      cell.detailTextLabel!.text = formattedTime(lookup1ObjectTime)
+      cell.textLabel?.text = "Lookup 1 Object:"
+      cell.detailTextLabel?.text = formattedTime(lookup1ObjectTime)
     case SetVCRow.lookup10Objects.rawValue:
-      cell.textLabel!.text = "Lookup 10 Objects:"
-      cell.detailTextLabel!.text = formattedTime(lookup10ObjectsTime)
+      cell.textLabel?.text = "Lookup 10 Objects:"
+      cell.detailTextLabel?.text = formattedTime(lookup10ObjectsTime)
     default:
-      print("Unhandled row! \((indexPath as NSIndexPath).row)")
+      print("Unhandled row \((indexPath as NSIndexPath).row)")
     }
 
     return cell

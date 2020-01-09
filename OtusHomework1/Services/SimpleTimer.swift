@@ -26,7 +26,8 @@ class SimpleTimer: NSObject {
         jobs.append(job)
         
         self.internalTimer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(self.doJob), userInfo: nil, repeats: true)
-        RunLoop.current.add(self.internalTimer!, forMode: .common)
+        guard let time = self.internalTimer else { return }
+        RunLoop.current.add(time, forMode: .common)
         self.internalTimer?.tolerance = 0.1
     }
   

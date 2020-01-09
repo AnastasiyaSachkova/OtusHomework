@@ -20,7 +20,7 @@ class FeedTableViewCell: UITableViewCell {
     }
     
     func set(data:FakeData, color: UIColor) {
-         self.title.text = data.name
+        self.title.text = data.name
         backgroundColor = color
     }
     

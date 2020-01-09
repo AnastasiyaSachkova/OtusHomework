@@ -13,11 +13,23 @@ class FeedViewModel: NSObject {
     
     private var fakeData: [FakeData] = FakeDataProvider().loadFakeData()
     private var algoData = AlgoProvider().all
-    private let findData = FindFakeDataProvider()
+    //private let findData = FindFakeDataProvider()
     var reloadSections: ((_ section: Int) -> Void)?
     typealias VoidCompletion = () -> Void
     private var findCompletion: VoidCompletion?
+    private var testResult: [String : Double]?
+    private var testTime: Double?
     
+    private var findFakeDataProvider: FindFakeDataProvider = {
+        if let service: FindFakeDataProvider = ServiceLocator.shared.getService() {
+            return service
+            }
+//        else {
+//            fatalError()
+//        }
+//
+        return FindFakeDataProvider()
+    }()
 }
 
 extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
@@ -53,18 +65,57 @@ extension FeedViewModel: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension FeedViewModel  {
+    @objc func startTest(){
+        let sheduler = Sheduler()
+        let count = 10000
+        let queueSuffixArray = JobQueue(jobs: [{
+            _ = SuffixArrayManipulator().setupWithObjectCount(count/10)
+            }])
+        sheduler.addJobQueue(queue: queueSuffixArray, nameQueue: "SuffixArray")
+
+
+
+        let queueSwiftArray = JobQueue(jobs: [{
+            _ = SwiftArrayManipulator().setupWithObjectCount(count)
+            }])
+        sheduler.addJobQueue(queue: queueSwiftArray, nameQueue: "Array")
+
+
+//        let queueDictionary = JobQueue(jobs: [{
+//            _ = SwiftDictionaryManipulator().setupWithEntryCount(count)
+//            }])
+//        sheduler.addJobQueue(queue: queueDictionary, nameQueue: "Dictionary")
+//
+//
+//        let queueSet = JobQueue(jobs: [{
+//            _ = SwiftSetManipulator().setupWithObjectCount(count)
+//            }])
+//        sheduler.addJobQueue(queue: queueSet, nameQueue: "Set")
+
+        sheduler.start(){
+            self.testResult = sheduler.getResult()
+            self.testTime = sheduler.timeOfWork
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+}
+
 extension FeedViewModel: UISearchBarDelegate, UISearchResultsUpdating {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         guard let text = searchBar.text else { return }
-        findData.updateSuffixArray()
-        fakeData = findData.findDataByName(text)
-        
+        findFakeDataProvider.updateSuffixArray()
+        fakeData = findFakeDataProvider.findDataByName(text)
+        //findData.updateSuffixArray()
+        //fakeData = findData.findDataByName(text)
     }
 
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
-        fakeData = findData.findDataByName(text)
-      
+        fakeData = findFakeDataProvider.findDataByName(text)
+        //fakeData = findData.findDataByName(text)
     }
 
 }

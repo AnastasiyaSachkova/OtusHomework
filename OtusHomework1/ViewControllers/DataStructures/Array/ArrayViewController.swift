@@ -62,7 +62,7 @@ class ArrayViewController: DataStructuresViewController {
       lookupByIndexTime = arrayManipulator.lookupByIndex()
       lookupByObjectTime = arrayManipulator.lookupByObject()
     } else {
-      print("Array not set up yet!")
+      print("Array not set up yet")
     }
   }
     
@@ -75,34 +75,34 @@ class ArrayViewController: DataStructuresViewController {
     let cell = super.tableView(tableView, cellForRowAt: indexPath)
     switch (indexPath as NSIndexPath).row {
     case ArrayVCRow.creation.rawValue:
-      cell.textLabel!.text = "Array Creation:"
-      cell.detailTextLabel!.text = formattedTime(creationTime)
+      cell.textLabel?.text = "Array Creation:"
+      cell.detailTextLabel?.text = formattedTime(creationTime)
     case ArrayVCRow.insertAt0.rawValue:
-      cell.textLabel!.text = "Insert At Index 0:"
-      cell.detailTextLabel!.text = formattedTime(insertAt0Time)
+      cell.textLabel?.text = "Insert At Index 0:"
+      cell.detailTextLabel?.text = formattedTime(insertAt0Time)
     case ArrayVCRow.insertAtMid.rawValue:
-      cell.textLabel!.text = "Insert In Middle:"
-      cell.detailTextLabel!.text = formattedTime(insertAtMidTime)
+      cell.textLabel?.text = "Insert In Middle:"
+      cell.detailTextLabel?.text = formattedTime(insertAtMidTime)
     case ArrayVCRow.insertAtEnd.rawValue:
-      cell.textLabel!.text = "Insert At End:"
-      cell.detailTextLabel!.text = formattedTime(insertAtEndTime)
+      cell.textLabel?.text = "Insert At End:"
+      cell.detailTextLabel?.text = formattedTime(insertAtEndTime)
     case ArrayVCRow.deleteAt0.rawValue:
-      cell.textLabel!.text = "Remove From Index 0:"
-      cell.detailTextLabel!.text = formattedTime(removeAt0Time)
+      cell.textLabel?.text = "Remove From Index 0:"
+      cell.detailTextLabel?.text = formattedTime(removeAt0Time)
     case ArrayVCRow.deleteAtMid.rawValue:
-      cell.textLabel!.text = "Remove From Middle:"
-      cell.detailTextLabel!.text = formattedTime(removeAtMidTime)
+      cell.textLabel?.text = "Remove From Middle:"
+      cell.detailTextLabel?.text = formattedTime(removeAtMidTime)
     case ArrayVCRow.deleteAtEnd.rawValue:
-      cell.textLabel!.text = "Remove From End:"
-      cell.detailTextLabel!.text = formattedTime(removeAtEndTime)
+      cell.textLabel?.text = "Remove From End:"
+      cell.detailTextLabel?.text = formattedTime(removeAtEndTime)
     case ArrayVCRow.lookupByIndex.rawValue:
-      cell.textLabel!.text = "Lookup By Index:"
-      cell.detailTextLabel!.text = formattedTime(lookupByIndexTime)
+      cell.textLabel?.text = "Lookup By Index:"
+      cell.detailTextLabel?.text = formattedTime(lookupByIndexTime)
     case ArrayVCRow.lookupByObject.rawValue:
-      cell.textLabel!.text = "Lookup By Object:"
-      cell.detailTextLabel!.text = formattedTime(lookupByObjectTime)
+      cell.textLabel?.text = "Lookup By Object:"
+      cell.detailTextLabel?.text = formattedTime(lookupByObjectTime)
     default:
-      print("Unhandled row! \((indexPath as NSIndexPath).row)")
+      print("Unhandled row \((indexPath as NSIndexPath).row)")
     }
 
     return cell

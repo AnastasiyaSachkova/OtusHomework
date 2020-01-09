@@ -63,7 +63,7 @@ class DictionaryViewController: DataStructuresViewController {
       lookup1EntryTime = dictionaryManipulator.lookup1EntryTime()
       lookup10EntriesTime = dictionaryManipulator.lookup10EntriesTime()
     } else {
-      print("Dictionary not yet set up!")
+      print("Dictionary not yet set up")
     }
   }
 
@@ -74,34 +74,34 @@ class DictionaryViewController: DataStructuresViewController {
 
     switch (indexPath as NSIndexPath).row {
     case DictionaryVCRow.creation.rawValue:
-      cell.textLabel!.text = "Dictionary Creation:"
-      cell.detailTextLabel!.text = formattedTime(creationTime)
+      cell.textLabel?.text = "Dictionary Creation:"
+      cell.detailTextLabel?.text = formattedTime(creationTime)
     case DictionaryVCRow.add1Entry.rawValue:
-      cell.textLabel!.text = "Add 1 Entry:"
-      cell.detailTextLabel!.text = formattedTime(add1EntryTime)
+      cell.textLabel?.text = "Add 1 Entry:"
+      cell.detailTextLabel?.text = formattedTime(add1EntryTime)
     case DictionaryVCRow.add5Entries.rawValue:
-      cell.textLabel!.text = "Add 5 Entries:"
-      cell.detailTextLabel!.text = formattedTime(add5EntriesTime)
+      cell.textLabel?.text = "Add 5 Entries:"
+      cell.detailTextLabel?.text = formattedTime(add5EntriesTime)
     case DictionaryVCRow.add10Entries.rawValue:
-      cell.textLabel!.text = "Add 10 Entries:"
-      cell.detailTextLabel!.text = formattedTime(add10EntriesTime)
+      cell.textLabel?.text = "Add 10 Entries:"
+      cell.detailTextLabel?.text = formattedTime(add10EntriesTime)
     case DictionaryVCRow.remove1Entry.rawValue:
-      cell.textLabel!.text = "Remove 1 Entry:"
-      cell.detailTextLabel!.text = formattedTime(remove1EntryTime)
+      cell.textLabel?.text = "Remove 1 Entry:"
+      cell.detailTextLabel?.text = formattedTime(remove1EntryTime)
     case DictionaryVCRow.remove5Entries.rawValue:
-      cell.textLabel!.text = "Remove 5 Entries:"
-      cell.detailTextLabel!.text = formattedTime(remove5EntriesTime)
+      cell.textLabel?.text = "Remove 5 Entries:"
+      cell.detailTextLabel?.text = formattedTime(remove5EntriesTime)
     case DictionaryVCRow.remove10Entries.rawValue:
-      cell.textLabel!.text = "Remove 10 Entries:"
-      cell.detailTextLabel!.text = formattedTime(remove10EntriesTime)
+      cell.textLabel?.text = "Remove 10 Entries:"
+      cell.detailTextLabel?.text = formattedTime(remove10EntriesTime)
     case DictionaryVCRow.lookup1Entry.rawValue:
-      cell.textLabel!.text = "Lookup 1 Entry:"
-      cell.detailTextLabel!.text = formattedTime(lookup1EntryTime)
+      cell.textLabel?.text = "Lookup 1 Entry:"
+      cell.detailTextLabel?.text = formattedTime(lookup1EntryTime)
     case DictionaryVCRow.lookup10Entries.rawValue:
-      cell.textLabel!.text = "Lookup 10 Entries:"
-      cell.detailTextLabel!.text = formattedTime(lookup10EntriesTime)
+      cell.textLabel?.text = "Lookup 10 Entries:"
+      cell.detailTextLabel?.text = formattedTime(lookup10EntriesTime)
     default:
-      print("Unhandled row! \((indexPath as NSIndexPath).row)")
+      print("Unhandled row \((indexPath as NSIndexPath).row)")
     }
 
     return cell
