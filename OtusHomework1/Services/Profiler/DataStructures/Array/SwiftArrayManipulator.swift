@@ -9,7 +9,7 @@
 import Foundation
 
 open class SwiftArrayManipulator: ArrayManipulator {
-  fileprivate var intArray = [Int]()
+var intArray = [Int]()
   
   open func arrayHasObjects() -> Bool {
     if intArray.count == 0 {
@@ -42,7 +42,9 @@ open class SwiftArrayManipulator: ArrayManipulator {
     
     assert(intArray[0] == next, "First object was not changed")
     intArray.remove(at: 0)
+    if intArray.count != 0 {
     assert(intArray[0] != next, "First object not back to original")
+    }
     
     return time
   }
@@ -60,8 +62,9 @@ open class SwiftArrayManipulator: ArrayManipulator {
     
     //Reset
     self.intArray.remove(at: middleIndex)
-    
+    if intArray.count != 0 {
     assert(intArray[middleIndex] != next, "Middle object is not the same after removal")
+    }
     
     return time
   }
@@ -80,6 +83,7 @@ open class SwiftArrayManipulator: ArrayManipulator {
   //MARK: Removal tests
   
   func removeFirstObject() -> TimeInterval {
+    
     let originalFirst = intArray[0] as Int
     let time = Profiler.runClosureForTime() {
       self.intArray.remove(at: 0)
@@ -121,7 +125,9 @@ open class SwiftArrayManipulator: ArrayManipulator {
     let randomIndex = Int(arc4random_uniform(elements))
     
     let time = Profiler.runClosureForTime() {
+        if self.intArray.count != 0 {
       _ = self.intArray[randomIndex]
+        }
     }
     
     return time

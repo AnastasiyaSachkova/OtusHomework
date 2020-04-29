@@ -7,43 +7,43 @@
 //
 
 private enum SuffixArrayVCRow: Int {
-  case creation = 0,
-  changeSuffixes,
-  reverseSuffixArray,
-  searchFor10Tripples,
-  find10Tripples
-
+    case creation = 0,
+    changeSuffixes,
+    reverseSuffixArray,
+    searchFor10Tripples,
+    find10Tripples
+    
 }
 
 
 import UIKit
 
 class SuffixSequenceViewController: DataStructuresViewController {
-      //MARK: - Variables
-
+    //MARK: - Variables
+    
     let suffixArrayManipulator: SuffixArrayManipulator = SwiftSuffixArrayManipulator()
-
+    
     var creationTime: TimeInterval = 0
     var changingSuffixesTime: TimeInterval = 0
     var reverseSuffixArrayTime: TimeInterval = 0
     var searchFor10TripplesTime: TimeInterval = 0
-
-
-      //MARK: - Methods
-
-      //MARK: View lifecycle
-
-      override func viewDidLoad() {
+    
+    
+    //MARK: - Methods
+    
+    //MARK: View lifecycle
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         createAndTestButton.setTitle("Create SuffixIterator and Test", for: [])
-      }
-
-      //MARK: Superclass creation/testing overrides
-
-      override func create(_ size: Int) {
+    }
+    
+    //MARK: Superclass creation/testing overrides
+    
+    override func create(_ size: Int) {
         creationTime = suffixArrayManipulator.setup()
-      }
-
+    }
+    
     override func test(finishHandler: @escaping ()->()) {
         if (suffixArrayManipulator.suffixArrayHasObjects()) {
             let queue = JobQueue2.init {
@@ -63,16 +63,16 @@ class SuffixSequenceViewController: DataStructuresViewController {
             print("SuffixArray is not set up yet")
         }
     }
-
-      //MARK: Table View Override
-
-
-      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    //MARK: Table View Override
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         switch (indexPath as NSIndexPath).row {
         case SuffixArrayVCRow.creation.rawValue:
-          cell.textLabel?.text = "SuffixArray Creation:"
-          cell.detailTextLabel?.text = formattedTime(creationTime)
+            cell.textLabel?.text = "SuffixArray Creation:"
+            cell.detailTextLabel?.text = formattedTime(creationTime)
         case SuffixArrayVCRow.changeSuffixes.rawValue:
             cell.textLabel?.text = "Changing Each Suffix in Array:"
             cell.detailTextLabel?.text = formattedTime(changingSuffixesTime)
